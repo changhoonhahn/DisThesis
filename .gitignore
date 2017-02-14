@@ -1,1 +1,11 @@
 *.pdf
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.lof
+*.lot
+*.toc
+
+bibentries

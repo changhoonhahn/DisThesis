@@ -7,8 +7,6 @@ Michael~R.~Blanton (NYU), Jeremy~L.~Tinker (NYU), and Sergio Rodr\'{i}guez-Torre
 (Universidad Aut\'{o}noma de Madrid) published in \emph{Monthly Notices of the Royal
 Astronomical Society}. 
 
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
 \newcommand{\beqa}{\begin{eqnarray}}
 \newcommand{\eeqa}{\end{eqnarray}}
 
@@ -24,6 +22,8 @@ Astronomical Society}.
 \def\fun#1#2{\lower3.6pt\vbox{\baselineskip0pt\lineskip.9pt
 \ialign{$\mathsurround=0pt#1\hfill##\hfil$\crcr#2\crcr\sim\crcr}}}
 
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
 
 %\title{The Effect of Fiber Collisions on the Galaxy Power Spectrum Multipoles} 
 
@@ -238,7 +238,7 @@ covered by unique sets of spectroscopic plates, and redshift failures
 % FIGURE %%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.425]{figs/fc/mock_catalog_z_dist.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_z_dist.pdf} 
 \caption{Normalized galaxy redshift distribution of the Nseries (\nseriescolor), 
 QPM (\qpmcolor), and BigMultiDark (\bmdcolor) mock catalogs. The 
 normalized redshift distribution of BOSS DR12 CMASS sample galaxies 
@@ -293,7 +293,7 @@ neighbors in regions of the footprint only covered by one tile.
 % P(k) plot for mocks and BOSS --------------------------------------------------
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.55]{figs/fc/mock_catalog_Plk.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_Plk.pdf} 
 \caption{
 Power spectrum monopole $P_0(k)$ and 
 quadrupole $|P_2(k)|$ measurements for the Nseries (\nseriescolor), 
@@ -316,7 +316,7 @@ they are {\it not} yet applied to the mock catalogs power spectra measurements a
 
 Finally the BigMultiDark galaxy mock catalog is generated using the 
 BigMultiDark Planck (BigMDPL), one of the MultiDark3 N-body simulations 
-(\citealt{Klypin:2014aa}). BigMDPL uses a GADGET-2 code (\citealt{Springel:2005aa})
+(\citealt{Klypin:2014aa}). BigMDPL uses a GADGET-2 code (\citealt{Springel:2005ab})
 in a cubic box of $2.5\;h^{-1}\mathrm{Gpc}$ sides with $3840^3$ dark matter 
 particles and a mass resolution of $2.4\times 10^{10} h^{-1}M_\odot$. 
 As the name suggests, BigMDPL uses Planck cosmological parameters in a flat $\Lambda$CDM cosmology: 
@@ -442,7 +442,7 @@ represented in Figure \ref{fig:mockpk} by the width of the shaded regions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.55]{figs/fc/mock_catalog_NN_true_P024k_resid_rebin6x.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_NN_true_P024k_resid_rebin6x.pdf} 
 \caption{The fiber collision power spectrum residual, 
 $(P_l^\mathrm{NN}-P_l^\mathrm{true})$ 
 (Section \ref{sec:fc_pk}), for the monopole (top), quadrupole 
@@ -464,7 +464,7 @@ the effects of fiber collisions in $P_l(k)$ measurements.}
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.4]{figs/fc/mock_catalog_NN_true_P0k_norm_resid_rebin6x.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_NN_true_P0k_norm_resid_rebin6x.pdf} 
 \caption{{\it Top Panel}: The normalized residuals, 
 $1 - \overline{P_0^\mathrm{NN}}/\overline{P_0^\mathrm{true}}(k)$, 
 of the NN method for the Nseries (\nseriescolor), 
@@ -631,7 +631,7 @@ reconstruction' method.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.575]{figs/fc/mock_catalog_dlos.pdf}
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_dlos.pdf}
 \caption{
 Normalized distribution of $d_{\mathrm{LOS}}$ for Nseries
 (\nseriescolor), QPM (\qpmcolor), and BigMultiDark (\tmcolor) 
@@ -876,7 +876,7 @@ We now discuss the implementation and performance of our  LRec fiber collision m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.55]{figs/fc/mock_catalog_dlospeak_true_Plk_resid_floran_offset250_0_rebin6x.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_dlospeak_true_Plk_resid_floran_offset250_0_rebin6x.pdf} 
 \caption{The power spectrum residual of the line-of-sight reconstruction (LRec) 
 method (Section \ref{sec:dlospeak}), 
 $\Delta P_\ell \equiv P_l^\mathrm{LRec} -P_l^\mathrm{true}$, 
@@ -905,7 +905,7 @@ of their correction on $P(k)$ is not straightforward.}
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.4]{figs/fc/mock_catalog_dlospeak_true_P0k_norm_resid_rebin6x.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_dlospeak_true_P0k_norm_resid_rebin6x.pdf} 
 \caption{{\it Top Panel}: The normalized residual, 
 $1 - P_l^\mathrm{LRec}/P_l^\mathrm{true}$, 
 for the Nseries (\nseriescolor), QPM (\qpmcolor), and BigMultiDark (\bmdcolor)
@@ -1121,7 +1121,7 @@ power spectrum multipoles.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.3]{figs/fc/2pcf_Nseries_upweighted_5mocks_5x5_tophat.pdf} 
+\includegraphics[width=1.\textwidth]{figs/fc/2pcf_Nseries_upweighted_5mocks_5x5_tophat.pdf} 
 \caption{$1 - (1 + \xi^\mathrm{NN})/(1+\xi^\mathrm{true})$ as a 
 function of transverse displacement, $r_p$, and line-of-sight 
 displacement $\pi$ (left). The color bar represents the value of this quantity. Note there is no detectable dependence on $\pi$.
@@ -1247,7 +1247,7 @@ $\Delta P^\mathrm{corr}$ respectively. Note that none of these terms is independ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.5]{figs/fc/mock_catalog_tophatconv_upw_delPlk_rebin6x.pdf}
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_tophatconv_upw_delPlk_rebin6x.pdf}
 \caption{Comparison of the power spectrum residuals from NN-corrected fiber collisions 
 $\Delta P_l = P_l^\mathrm{NN} - P_l^\mathrm{true}$ (dashed black) with 
 the $\Delta P_l$ from the effective window method obtained by adding Eqs.~(\ref{DeltaPellUC}) and~(\ref{DeltaPell2}) (\nseriescolor) for the monopole (left)
@@ -1382,7 +1382,7 @@ One can check that to leading order in $k D_\mathrm{fc}$, which is all we are us
                                                                                                                                                                                                                                                                             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}
 \begin{center}
-\includegraphics[scale=0.5]{figs/fc/mock_catalog_tophatconv_delPlk_untrusted_18_rebin6x.pdf}
+\includegraphics[width=1.\textwidth]{figs/fc/mock_catalog_tophatconv_delPlk_untrusted_18_rebin6x.pdf}
 \caption{Comparison of the correlated power spectrum residuals from unreliable modes obtained from mocks (dashed), Eq.~(\ref{eq:delp_untrust_nseries}), 
 to the polynomial approximation of  
 Eq.~(\ref{eq:delp_poly}) for $l' \leq 18$ (orange). The left and right panels
@@ -1581,8 +1581,6 @@ collision correction method can also be extended to higher order clustering
 statistics such as bispectrum (Hahn et al., in prep.). We will use the methods 
 presented in this paper to analyze the galaxy power spectrum and bispectrum 
 multipoles in future work.
-
-\bigskip
 
 \section*{Acknowledgements}
 CHH and MRB were supported by NSF-AST-1109432 and NSF-AST-1211644.

@@ -90,6 +90,8 @@
 \newcommand{\bvec}[1]{{\ensuremath{\boldsymbol{#1}}}}
 \newcommand{\paramvector}[1]{\bvec{#1}}
 \newcommand{\unit}[1]{\mathrm{#1}}
+\newcommand{\mneut}{$\Sigma m_\nu$}
+
 
 % Probabilities:
 \newcommand{\like}{\mathscr{L}}
@@ -100,32 +102,6 @@
 
 \newcommand{\todo}[1]{{\em \textcolor{red}{ #1}}}
 
-%\listfiles
-%\makeatletter
-%\newcommand\listofappendixname{List of Appendices}%\appendixname}
-%
-%\newcommand\listofappendices{%
-%    \if@twocolumn
-%        \@restonecoltrue\onecolumn
-%    \else
-%        \@restonecolfalse
-%    \fi
-%    \chapter*{\listofappendixname
-%        \@mkboth{%
-%            \MakeUppercase\listofappendixname}{\MakeUppercase\listofappendixname}}%
-%    \@starttoc{toa}%
-%    \if@restonecol\twocolumn\fi
-%    }
-%\g@addto@macro\appendix{%
-%    \addcontentsline{toc}{chapter}{\appendixname}%
-%    \xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%    \xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%    \xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%    \xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%    \xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%    \xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
-%}
-%\makeatother
 \makeatletter
     \newcommand\tableofappendices
         {\chapter*{List of Appendices}\@starttoc{toa}}

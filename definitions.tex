@@ -6,12 +6,17 @@
             filecolor=linkcolor,urlcolor=linkcolor}
 \hypersetup{pageanchor=false}
 
+\usepackage[titletoc]{appendix}
+\usepackage{tocloft}
+\usepackage{xpatch}
+
 \usepackage{indentfirst}
 \usepackage[tbtags]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{ctable, dashrule}
 \usepackage{url}
 
 % Custom AAS macros:
@@ -25,7 +30,6 @@
 \usepackage{algorithmic,algorithm}
 
 % Commands:
-
 % General formatting:
 \newcommand{\paper}{Chapter}
 
@@ -93,5 +97,39 @@
 \newcommand{\af}{\ensuremath{a_f}}
 \newcommand{\expect}[1]{\left<#1\right>}
 \newcommand{\normal}[2]{\mathcal{N} (#1, #2)}
+
+%\listfiles
+%\makeatletter
+%\newcommand\listofappendixname{List of Appendices}%\appendixname}
+%
+%\newcommand\listofappendices{%
+%    \if@twocolumn
+%        \@restonecoltrue\onecolumn
+%    \else
+%        \@restonecolfalse
+%    \fi
+%    \chapter*{\listofappendixname
+%        \@mkboth{%
+%            \MakeUppercase\listofappendixname}{\MakeUppercase\listofappendixname}}%
+%    \@starttoc{toa}%
+%    \if@restonecol\twocolumn\fi
+%    }
+%\g@addto@macro\appendix{%
+%    \addcontentsline{toc}{chapter}{\appendixname}%
+%    \xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%    \xpatchcmd{\@part}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%    \xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%    \xpatchcmd{\@chapter}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%    \xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%    \xpatchcmd{\@sect}{\addcontentsline{toc}}{\addcontentsline{toa}}{}{}%
+%}
+%\makeatother
+\makeatletter
+    \newcommand\tableofappendices
+        {\chapter*{List of Appendices}\@starttoc{toa}}
+    \newcommand\l@appendix[2]
+        {\par\noindent\bfseries{#1}\hfill\bfseries{#2}\par}
+\makeatother
+
 
 \sloppy\sloppypar

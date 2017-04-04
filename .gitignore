@@ -7,5 +7,7 @@
 *.lof
 *.lot
 *.toc
+*.toa
+*.apx
 
 bibentries

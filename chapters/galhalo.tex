@@ -10,8 +10,7 @@
 \chaplabel{galhalo}}
 
 This \paper\ is joint work with Jeremy~L.~Tinker (NYU) and Andrew Wetzel (UC Davis)
-(Universidad Aut\'{o}noma de Madrid) published in \emph{Monthly Notices of the Royal
-Astronomical Society}. 
+submitted to \emph{The Astrophysical Journal} as Hahn et al. \ (2017). 
 
 \section{Chapter Abstract}
 Central galaxies make up the majority of the galaxy population, 
@@ -259,7 +258,7 @@ ordering between subhalo $M_\mathrm{peak}$ and stellar mass, $\mathcal{M}_*$
 of its galaxy: $n(>M_\mathrm{peak}) = n(> \mathcal{M}_*)$. Through SHAM, we can 
 assign galaxy stellar masses to subhalos based on observed stellar mass function 
 (SMF) at the redshifts of the simulation outputs. 
-{\color{red} \bf Galaxy stellar masses are assigned independently at each snapshot.}
+Galaxy stellar masses are assigned independently at each snapshot.
 This allows us to not only track the history 
 of the subhalo, but also track the evolution of galaxy stellar masses through 
 their SHAM stellar masses at each snapshot.
@@ -359,8 +358,8 @@ based on SHAM, the stellar mass growth traces the merger induced
 subhalo growth. As we discuss later in detail, mounting evidence 
 disfavor merger driven quenching as the trigger of star formation 
 quenching, so our treatment of mergers do not impact our quenching
-timescale results. 
-{\color{red} \bf In summary, we construct from our simulation a catalog of central galaxies whose stellar mass and halo mass is traced through the redshift range $0.05 < z < 1$.}
+timescale results. In summary, we construct from our simulation 
+a catalog of central galaxies whose stellar mass and halo mass is traced through the redshift range $0.05 < z < 1$.
 
 \section{Star Formation in Central Galaxies} \label{sec:model}
 The $\mathtt{TreePM}$ simulation (\S \ref{sec:treepm}) provides a framework to examine 
@@ -655,7 +654,7 @@ our model must also quantify when and how many star-forming
 centrals quench from $\zinit$. 
 
 For satellite galaxies, the moment they start quenching can be
-related to {\color{red} \bf the moment when their host halo} is accreted 
+related to the moment when their host halo is accreted 
 into the central galaxy's host halo via a time delay of 
 several Gyrs (\citealt{Wetzel:2013aa}). 
 However, for central galaxies, the time when they start to 
@@ -864,7 +863,7 @@ result in a lower one.
 \multicolumn{2}{c}{} \\[-7pt]
 \multicolumn{2}{c}{Central Galaxy Quiescent Fraction (Eq. \ref{eq:fq})} \\
 \multicolumn{2}{c}{$f_\mathrm{Q}^\mathrm{cen}(\mathcal{M}_*, z) = f_\mathrm{Q}^\mathrm{cen}(\mathcal{M}_*, z=0) \times (1+z)^{\alpha(\mathcal{M}_*)}$} \\
-\multicolumn{2}{c}{$\tab\tab\;\, = (A_0 + A_1 \log \mathcal{M}_*) \times (1+z)^{\alpha(\mathcal{M}_*)}$} \\[-5pt]
+\multicolumn{2}{c}{$\;\;\;\, = (A_0 + A_1 \log \mathcal{M}_*) \times (1+z)^{\alpha(\mathcal{M}_*)}$} \\[-5pt]
 \multicolumn{2}{c}{\hdashrule{8cm}{0.5pt}{3pt 2pt}} \\
 \multicolumn{1}{c}{$A_0$} & \multicolumn{1}{c}{$-6.04$}\\
 \multicolumn{1}{c}{$A_1$} & \multicolumn{1}{c}{$0.64$}\\ [5pt]
@@ -919,7 +918,7 @@ cosmic star formation at $z < 1$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{figs/cenq/SSFRevol.pdf}
+\includegraphics[width=0.5\textwidth]{figs/cenq/SSFRevol.pdf}
 \caption{
 {\bf Top}: The evolution of the SSFR distribution in 
 our model (\S \ref{sec:sfr_assign}) for a reasonable set of 
@@ -950,37 +949,40 @@ valley will higher. For shorter quenching timescales, it will lower.
 \begin{table*}
 \caption{Parameterizations in the Central Galaxy SFH Model with Free Parameters}
 \begin{center}
-\begin{tabular}{ccccc} \toprule
-\multicolumn{5}{c}{} \\[-7pt]
-\multicolumn{1}{c}{Quantity} & \multicolumn{1}{c}{Parameterization} &
+\begin{tabular}{cccc} \toprule
+\multicolumn{4}{c}{} \\[-7pt]
+\multicolumn{1}{c}{Quantity}  &
 \multicolumn{1}{c}{Description} & \multicolumn{1}{c}{Parameter} &
 \multicolumn{1}{c}{Prior} \\
 \hline
-\multicolumn{5}{c}{} \\[-5pt]
+\multicolumn{4}{c}{} \\[-5pt]
 % Central Quenching Timescale
-\multicolumn{1}{c}{$\tau_Q^\mathrm{cen}(\mathcal{M}_*)$} & 
-\multicolumn{1}{c}{$A_\tau (\log\;\mathcal{M}_* - 11.1) + \delta_\tau$} & 
-\multicolumn{1}{c}{Central Quenching Timescale in Gyrs (Eq.~\ref{eq:tauq})} & 
+\multicolumn{1}{l}{$\tau_Q^\mathrm{cen}=$} & 
+\multicolumn{1}{c}{Central Quenching Timescale} & 
 \multicolumn{1}{c}{$A_\tau$} & 
 \multicolumn{1}{l}{$[-1.5, 0.5]$} \\
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & 
-\multicolumn{1}{c}{$\delta_\tau$} & \multicolumn{1}{l}{$[0.01, 1.5]$} \\[3pt]
+\multicolumn{1}{r}{$A_\tau (\log\;\mathcal{M}_* - 11.1) + \delta_\tau$} & 
+\multicolumn{1}{c}{in Gyrs (Eq.~\ref{eq:tauq})} & 
+\multicolumn{1}{c}{$\delta_\tau$} & 
+\multicolumn{1}{l}{$[0.01, 1.5]$} \\[3pt]
 % Initial Green Valley Fraction 
-\multicolumn{1}{c}{$f_{GV}(\mathcal{M}_*)$} & 
-\multicolumn{1}{c}{$A_{GV} (\log\;\mathcal{M}_* - 10.5) + \delta_{GV}$} & 
-\multicolumn{1}{c}{Initial $z \approx 1$ Green Valley Fraction (Eq.~\ref{eq:f_gv})} & 
+\multicolumn{1}{l}{$f_{GV} = $} & 
+\multicolumn{1}{c}{Initial $z \approx 1$ Green Valley} & 
 \multicolumn{1}{c}{$A_{GV}$} & 
 \multicolumn{1}{l}{$[0., 1.]$} \\
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & 
-\multicolumn{1}{c}{$\delta_{GV}$} & \multicolumn{1}{l}{$[-0.4, 0.6]$} \\[3pt]
+\multicolumn{1}{r}{$A_{GV} (\log\;\mathcal{M}_* - 10.5) + \delta_{GV}$} & 
+\multicolumn{1}{c}{Fraction (Eq.~\ref{eq:f_gv})} & 
+\multicolumn{1}{c}{$\delta_{GV}$} & 
+\multicolumn{1}{l}{$[-0.4, 0.6]$} \\[3pt]
 % Quenching Probability Factor 
-\multicolumn{1}{c}{$f_{P_Q}(\mathcal{M}_*)$} & 
-\multicolumn{1}{c}{$A_{P_Q} (\log\mathcal{M}_* - 10.5) + \delta_{P_Q}$} & 
-\multicolumn{1}{c}{Quenching Probability Factor (Eq.~\ref{eq:fpq})} & 
+\multicolumn{1}{l}{$f_{P_Q}=$} & 
+\multicolumn{1}{c}{Quenching Probability} & 
 \multicolumn{1}{c}{$A_{P_Q}$} & 
 \multicolumn{1}{l}{$[-5., 0.]$} \\
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & 
-\multicolumn{1}{c}{$\delta_\tau$} & \multicolumn{1}{l}{$[0.5, 2.5]$} \\[3pt]
+\multicolumn{1}{r}{$A_{P_Q} (\log\mathcal{M}_* - 10.5) + \delta_{P_Q}$} & 
+\multicolumn{1}{c}{Factor (Eq.~\ref{eq:fpq})} & 
+\multicolumn{1}{c}{$\delta_\tau$} & 
+\multicolumn{1}{l}{$[0.5, 2.5]$} \\[3pt]
 \hline
 \end{tabular} \label{tab:free_params}
 \end{center}
@@ -1414,7 +1416,7 @@ star-forming to quenching than central galaxies.}
 % Figure: Quenching timescale comparison  
 \begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{figs/cenq/t_quenching_comparison_z0_2.pdf}
+\includegraphics[width=0.75\textwidth]{figs/cenq/t_quenching_comparison_z0_2.pdf}
 \caption{
 Comparison of the central galaxy quenching migration time 
 estimate we infer, ($t_\mathrm{mig}^\mathrm{cen}$; orange) with 
@@ -1547,7 +1549,7 @@ different quenching mechanisms have on the stellar metallicity
 of local galaxies from the SDSS DR7 sample. To reproduce the stellar
 metallicity difference between quiescent and star forming galaxies 
 in their galaxy sample, they conclude that the primary mechanism for 
-quenching is gas depletion absent accretion and {\color{red} \bf it has a typical} quenching 
+quenching is gas depletion absent accretion and it has a typical quenching 
 migration time of $t_\mathrm{mig} \sim 4\;\mathrm{Gyr}$ for 
 $\mathcal{M} < 10^{11}\mathrm{M}_\odot$. 
 We infer the quenching migration time from Figure 2 of \cite{Peng:2015aa}
@@ -1573,8 +1575,8 @@ corresponds to stellar masses of $\sim 10^{10.25} \mathrm{M}_\odot$.
 Yet, a significant fraction of the SDSS central galaxy population 
 with stellar masses $< 10^{10.25} \mathrm{M}_\odot$ are quiescent.  
 While, scatter in the halo mass threshold and the stellar mass to 
-halo mass relation, combined, may help resolve {\color{red} \bf this tension, halo quenching 
-faces a number of other challenges.} For instance, the predictions of
+halo mass relation, combined, may help resolve this tension, halo quenching 
+faces a number of other challenges. For instance, the predictions of
 halo quenching models are difficult to reconcile with the observed scatter
 in the stellar mass to halo mass relation (\citealt{Tinker:2016aa}).
 Furthermore, models that rely only on such ‘halo quenching’ still 

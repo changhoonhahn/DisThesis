@@ -11,6 +11,7 @@
 \newcommand{\thesisadvisor}{Professor Michael R. Blanton}% and Roman Scoccimarro}
 \newcommand{\graddate}{May 2017}
 
+
 %% The following makes chapters and sections, but not subsections,
 %% appear in the TOC (table of contents). Increase to 2 or 3 to
 %% make subsections or subsubsections appear, respectively. It seems
@@ -125,6 +126,12 @@
 %% those tables included withing the "table" environment.
 \newpage\addcontentsline{toc}{section}{List of Tables}
 \listoftables
+
+%%%%% List of APpendices %%%%%%%%%%%%%
+% Create list of appendices, and don't include appendices in the table of contents
+\newpage %\addcontentsline{toc}{chapter}{List of Appendices}
+%\chapter*{List of Appendices}
+\tableofappendices
 \newpage
 
 %%%%% Body of thesis starts %%%%%%%%%%%%
@@ -145,10 +152,12 @@
 
 % %%%%% Appendices start %%%%%%%%%%%%%%%%
 % %% Comment out the following line if your thesis has no appendix
- \appendix
- \input{app1}
- \input{app2}
- \input{app3}
+\appendix
+\addappheadtotoc
+\addtocontents{toa}{\addvspace{20pt}}%just to separate the heading and the first entry
+\input{app1}
+\input{app2}
+\input{app3}
 % %% Note: If your thesis has more than one appendix, NYU requires a "list of
 % %% appendices" page before the body of the thesis. I don't provide the tools
 % %% to create that here, so you're on your own for that one... Sorry.

@@ -1,23 +1,30 @@
 \chapter*{Introduction}\addcontentsline{toc}{chapter}{Introduction}
-%% copied from dissertation fellowship intro 
-Amidst the stars, galaxies, and the countless objects we observe in the Universe lie
-undetected structures of dark matter, orders of magnitude larger than the luminous objects they
-engulf. These vast invisible structures began in the very early Universe, as quantum 
-fluctuations in the aftermath of the Big Bang. 
+Amidst the countless stars and galaxies we observe in the Universe lie 
+undetected structures of dark matter, orders of magnitude larger than 
+the luminous objects they engulf. These vast invisible structures began 
+in the very early Universe, as quantum fluctuations in the aftermath of 
+the Big Bang. 
 %These vast invisible structures began as quantum fluctuations in the beginning of the Universe in the aftermath of the Big Bang. 
+During the subsequent period of inflation (\todo{cite?}), these primordial fluctations 
+were amplified by the accelerated expansion of the Universe and then 
+propagated through gravitational instability for billions of years. 
 
-Afterwards, during the period of inflation, these primordial fluctations are amplified by 
-the accelerated expansion of the Universe and then propagated through gravitational 
-instability for billions of years. 
+Despite constituting most of the matter in the Universe, dark matter 
+has yet to be directly observed. In fact, it can only be studied through 
+its gravitational interactions with luminous baryons — the matter that 
+constitutes stars, galaxies, and celestial objects that emit light. 
+In a way, the galaxies we observe in the cosmic volumes probed by our 
+telescopes act as illuminated beacons tracing the vast dark matter 
+terrains of the Universe.
 
-Despite constituting most of the matter in the Universe, dark matter has yet to be directly 
-observed. In fact, it can only be studied through its gravitational interactions with luminous 
-baryons — the matter that constitutes stars, galaxies, and celestial objects that emit light. 
-In a way, the galaxies we observe in the cosmic volumes probed by our telescopes act as 
-illuminated beacons tracing the vast dark matter terrains of the Universe.
+Over the past decade, spectroscopic redshift surveys like the 
+Baryon Oscillation Spectroscopic Survey (BOSS\todo{cite}) have 
+exploited these galactic beacons to map out the cosmic structure
+of the Universe. Precise measurements of distance and growth 
+of large-scale structure (LSS) from these surveys, provide tests 
+of cosmological models that desribe the content, geometry and history 
+of the Universe. By analyzing measurements of LSS,  
 
-These galaxies offer 
-\todo{detail the current state of cosmology}
 
 Through these galaxies, we can explore the properties of the underlying dark matter
 and the growth of their structure. Measurements that quantify these properties allow us to make
@@ -39,28 +46,91 @@ questions that I seek to answer in my dissertation.
 
 
 %\section{$\Lambda$CDM cosmology}
-\section{Growth of Structure}
-\begin{enumerate}
+\section{Large Scale Structure}
+Primordial quantum fluctuations grow through gravitational instability into 
+the large-scale structures of the nearby Universe. In this section, I briefly 
+describe the theory of this process, introduce key terminology, and derive
+the core concepts of LSS cosmology using galaxies.
+
+We begin by defining the matter overdensity field at comoving position 
+${\bf r}$ as
+\beq
+\delta({\bf r}) = \frac{\rho({\bf r}) - \bar{\rho}}{\bar{\rho}}, 
+\eeq
+where $\rho({\bf r})$ and $\bar{\rho}$ represent the density field and mean density
+respectively. The Fourier transform of this overdensity field is then defined as
+\beq
+\delta({\bf k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3} e^{-i{\bf k}\dot{\bf r}}\;\delta({\bf r}).
+\eeq
+Fourier space ($k$-space) is generally favored over configuration space for 
+describing the evolution of these overdensities because the Fourier modes 
+of $\delta$ evolve independently in linear theory -- \emph{i.e.} on large scales.
+
+Often, the information in the overdensity field is quantified using its 
+$N$-point statistics (\todo{cite Peebles bernardeua}). In fact, the two-point
+statistic is one of commonly used tool in large scale structure studies.
+This two-point statistic (also referred to as the correlation function) is
+defined as, 
+\beq
+\xi(r) = <\delta({\bf x})\delta({\bf x} +  {\bf r})>.
+\eeq
+In Fourier space,
+\beq
+<\delta({\bf k})\delta({\bf k'})> = (2\pi)^3 P(k) \delta^{D}({\bf k}+{\bf k'}).
+\eeq
+$\delta^{D}$ is the Dirac delta function and $P(k)$ is the {\em powerspectrum}, 
+the Fourier transform of $\xi$. In principle, $\xi$ and $P(k)$ contain the same 
+information. In practice, however, analyzing $\xi$ versus $P(k)$ carry different 
+caveats (\todo{cite FKP}). Throughout this section, and also the dissertation, 
+we will mainly focus on the powerspectrum. 
+
+Next, I pedagogically derive the evolution of the dark matter overdensity 
+field on sub-horizon scales. For pressureless dark matter, the following 
+expression can be derived from the continuity, Euler, and Poisson equations
+(see \todo{cite Dodelson} for detailed derivation): 
+\beq
+\eeq
+\begin{itemize}
 {\item 
-define density fluctuations and powerspectrum etc 
+talk about growth of density fluctuations from gravitational instability
 }
 {\item 
-post inflation 
+talk about the shape of the powerspectrum at low redshift (inflation + transfer function)
 }
-{\item 
- transfer function 
- }
- {\item
- shape of the power spectrum
- }
-\end{enumerate}
+{\item
+talk about galaxy bias  
+}
+\end{itemize}
 
 \section{Redshift-Space Distortions}
+Spectroscopic redshift surveys such as BOSS catalog the angular positions (right ascension 
+and declination) and redshifts of galaxies in the sky. 
+
+\beq
+z_{obv} = z_{true} +  \frac{v_{pec}}{c}
+\eeq
+
+Kaiser Effect
+\beq
+\delta^{(s)}({\bf k}) = (1 + f \mu_k^2) \delta({bf k})
+\eeq
+\beq
+\delta_g^{(s)}({\bf k}) = (b + f \mu_k^2) \delta({bf k})
+\eeq
+\beq
+P_g^{(s)}(k) = (b + f \mu_k^2)^2 P(k)
+\eeq
+
+\beq
+\mu = \hat{z} \odot \hat{k} 
+\eeq
+
+Fingers of God 
+\beq
+P_g^{(s)}(k) = e^{-f^2 \sigma_v^2 \mu^2 k^2} (b + f \mu^2)^2 P(k)
+\eeq
+
 \begin{enumerate}
-{\item 
-\todo{Galaxy surveys such as the Sloan Digital Sky Survey measure the angular position 
-(right ascension and declination) and redshifts of galaxies.}
-}
 {\item 
 linear theory RSD powerspectrum
 }
@@ -81,7 +151,10 @@ From the imprints on galaxy clustering, we can place limits on \mneut.
 
 \begin{enumerate}
 {\item 
-standard likelihood analysis 
+multipole expansion, observables, etc
+}
+{\item 
+standard likelihood analysis  
 }
 {\item 
 limits of the current framework

@@ -1,9 +1,13 @@
 \chapter*{Conclusion}\addcontentsline{toc}{chapter}{Conclusion}
 
+\todo{
+something that references the intro and answers it  \\
 In this dissertation, we have tackled key methodological challenges 
 in galaxy clustering analyses and galaxy evolution with robust treatment of systmeatics, innovative
 approaches to inference, and improved models of the galaxy-halo 
-connection. \todo{more summarizing remarks}
+connection.
+} 
+
 
 \todo{Summary of \Chap{fc}}
 
@@ -13,45 +17,56 @@ connection. \todo{more summarizing remarks}
 
 \todo{Summary of \Chap{galhalo}} % galaxy-haloc onnection from a data-driven LCDM view
 
-\todo{
-Over the next decade a number of surveys, namely eBOSS and DESI, will expand the 
+Over the next decade future surveys, namely eBOSS and DESI, will expand the 
 cosmic volumes probed with redshifts by an order of magnitude. They have the 
-potential to measure the growth of structure and constrain
-cosmological parameters with unprecedented precision. The main challenges for 
-realizing their full statistical power are methodological and can be solved by the 
-framework I have implemented in this dissertation: robust treatment of systematics, 
-innovative approaches to inference, and improved models of the galaxy-halo connection. 
-}
+potential to measure the growth of structure and constrain cosmological 
+parameters with unprecedented precision. The main challenges for realizing 
+their full statistical power are methodological. The frameworks I present
+in this dissertation -- robust treatment of systematics, innovative approaches 
+to accurate inference, and improved models of the galaxy-halo connection -- can be 
+extended to these future surveys and used to tackle key methodological 
+challenges. 
 %by robust treatment of systematics, accurate modeling, and higher order statistics.
-
 %eBOSS and DESI will expand the cosmic volume probed with redshifts by an order of magnitude. 
 %They have the potential to measure the growth of structure and \mneut~with unprecedented precision.
 %eBOSS and DESI will probe unprecedented cosmic volumes with galaxy redshifts and have the potential to measure the growth of structure and \mneut~with extraordinary precision. 
 %Galaxy clustering and thereby the growth of structure from RSD and \mneut ~can be measured with unprecedented precision. 
 %The main obstacles for realizing the full statistical power are methodological and can be solved by robust treatment of systematics, accurate probabilistic inference, and higher order statistics.\\ \vspace{-3mm}
 
-Observational systematics such as fiber collisions will continue to present 
-challenges for analyzing galaxy clustering in these future surveys. Due to their impact on the
-galaxy power spectrum, as described in~\Chap{fc}, much of the statistical gains from eBOSS 
-and DESI will be {\em wasted} unless we better account for systematics. In fact, in eBOSS 
-and DESI the systematics will be more complicated with multiple classes of target objects 
-and automated fiber positioning \citep{Cahn:2015_desifib, Dawson:2015aa}. But the methods 
-from ~\Chap{fc} can be extended to both surveys.
+For instance, observational systematics such as fiber collisions will continue 
+to impact galaxy clusteing analyses of eBOSS and DESI, which will utilize 
+fiber-fed spectrographs. As described in~\Chap{fc}, due to the impact that fiber 
+collisions have on small scales, much of the statistical gains from eBOSS and 
+DESI will be {\em wasted} if they are not properly account for in analyses. 
+In fact, in eBOSS and DESI the systematics will be more complicated with multiple 
+classes of target objects and automated fiber positioning 
+\citep{Cahn:2015_desifib, Dawson:2015aa}. But the methods from ~\Chap{fc} 
+can be extended to both surveys.
 
 \todo{
-The standard approach to parameter inference in LSS {\em assumes} that the likelihood function is Gaussian. While this is suitable for CMB and on large scales, with galaxies that formed through non-linear gravitational evolution, the likelihood {\em cannot} be Gaussian. Methods like {\em Approximate Bayesian Computation} (ABC) generate formal probabilistic constraints without deriving an explicit likelihood function. However, they are not yet widely implemented in LSS. 
+Furthermore, in~\Chap{abc}, we revealed deviations between the ABC posterior 
+probability distribution and the standard Gaussian pseudo-likelihood approach to 
+inference -- even in the narrower context of halo occupation modeling. Yet 
+there have not been direct investigations on the impact of the standard 
+assumptions on more general cosmological parameter constraints. With the 
+increased statistical power of future surveys, quantifying the impact of these 
+assumptions in our inference is critical for unbiased constraints. While
+tractability of forward modeling the data has been an obstacle for adopting 
+ABC, new models aimed at the next galaxy surveys, are making promising 
+strides. 
 }
 
-Observations of galaxies have now firmly established a global view of galaxy 
-properties out to $z{\sim}1$, as described in~\Chap{galenv}. In \Chap{galhalo}, 
-we used precise predictions of hierarchical growth of structure from $\Lambda$CDM
-to constrain key elements of galaxy evolution in a data-driven and statistical 
-fashion. The introduction of Integral Field Unit observations such as MaNGA along 
-with expanded galaxy samples such as the DESI Bright Galaxy Survey, offer exciting 
+Finally, as we describe in~\Chap{galenv}, observations of galaxies have 
+firmly established a global view of galaxy properties out to $z{\sim}1$. 
+As in \Chap{galhalo}, precise predictions of hierarchical growth of 
+structure from $\Lambda$CDM can be used to constrain key elements of 
+galaxy evolution in a data-driven and statistical fashion. The introduction 
+of Integral Field Unit observations (\emph{e.g.} MaNGA) and larger 
+galaxy samples (\emph{e.g.} DESI Bright Galaxy Survey) offer exciting 
 opportunities to extend the works of \chapname s~\chapalt{galenv} and~\chapalt{galhalo}
-and better understand the galaxy-halo connection.
+and construct better models of the galaxy-halo connection.
 
-Each of aspect of my dissertation will be instrumental for exploiting the full 
+Each aspect of my dissertation will be instrumental for exploiting the full 
 potential of future surveys and making more precise measurements of the growth
 rate of structure, the cosmological parameters, and thus tests of General Relativity 
 and modified gravity scenarios. 

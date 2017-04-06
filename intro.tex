@@ -49,32 +49,33 @@ questions that I seek to answer in my dissertation.
 \section{Large Scale Structure}
 Primordial quantum fluctuations grow through gravitational instability into 
 the large-scale structures of the nearby Universe. In this section, I briefly 
-describe the theory of this process, introduce key terminology, and derive
-the core concepts of LSS cosmology using galaxies.
+describe the simplified theory of this process, introduce key terminology, and 
+explain core concepts of LSS cosmology using galaxies.
 
-We begin by defining the matter overdensity field at comoving position 
+Lets begin by defining the matter overdensity field at comoving position 
 ${\bf r}$ as
 \beq
 \delta({\bf r}) = \frac{\rho({\bf r}) - \bar{\rho}}{\bar{\rho}}, 
 \eeq
-where $\rho({\bf r})$ and $\bar{\rho}$ represent the density field and mean density
-respectively. The Fourier transform of this overdensity field is then defined as
+where $\rho({\bf r})$ and $\bar{\rho}$ represent the density field and mean 
+density respectively. The Fourier transform of this overdensity field is 
+simply 
 \beq
 \delta({\bf k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3} e^{-i{\bf k}\dot{\bf r}}\;\delta({\bf r}).
 \eeq
 Fourier space ($k$-space) is generally favored over configuration space for 
-describing the evolution of these overdensities because the Fourier modes 
+describing the evolution of the overdensity field because the Fourier modes 
 of $\delta$ evolve independently in linear theory -- \emph{i.e.} on large scales.
 
-Often, the information in the overdensity field is quantified using its 
+The information in the overdensity field is often quantified using its 
 $N$-point statistics (\todo{cite Peebles bernardeua}). In fact, the two-point
 statistic is one of commonly used tool in large scale structure studies.
 This two-point statistic (also referred to as the correlation function) is
 defined as, 
 \beq
-\xi(r) = <\delta({\bf x})\delta({\bf x} +  {\bf r})>.
+\xi(r) = <\delta({\bf x})\delta({\bf x} +  {\bf r})>
 \eeq
-In Fourier space,
+and in Fourier space as,
 \beq
 <\delta({\bf k})\delta({\bf k'})> = (2\pi)^3 P(k) \delta^{D}({\bf k}+{\bf k'}).
 \eeq
@@ -84,23 +85,36 @@ information. In practice, however, analyzing $\xi$ versus $P(k)$ carry different
 caveats (\todo{cite FKP}). Throughout this section, and also the dissertation, 
 I will mainly focus on the powerspectrum. 
 
-With the above terminology in mind, the evolution of the dark matter overdensity
-field can be derived as follows (on sub-horizon scales). For pressureless 
-dark matter, we can start from the continuity equation, 
-\beq
+The evolution of the dark matter overdensity field can be derived as follows 
+(on sub-horizon scales). For pressureless dark matter, the equation of motion
+can be derived from the continuity, Euler, and Poisson equations
+\beqa 
+\frac{\partial \rho}{\partial t} + \nabla \dot \rho {\bf u} = 0,  \\ 
+\frac{\partial {\bf u}}{\partial t} + ({\bf u} \dot \nabla) \dot {\bf u} - \nabla\Phi = 0, \\ 
+\nabla^2\Phi - 4 \pi G \rho = 0 
+\eeqa
+to 
+\beq \label{eq:meszaros}
+\frac{\partial^2 \delta}{\partial t^2} + 2 \frac{\dot{a}}{a} \frac{\partial \delta}{\partial t} - 4 \pi G \bar{\rho} \delta = 0.
 \eeq
-Euler equation, 
+${\bf u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
+is the scale factor. For a detailed derivation I refer readers to \todo{cite Peebles 
+or Dodelson}. If the overdensity is written as  
 \beq
+\delta({\bf r}, t) = D(t) \delta({\bf r}, t=0), 
 \eeq
-and Poisson equations
+then the second order differential equation of Eq.~\ref{eq:meszaros} has two 
+independent solutions: a growing mode $D^{(+)}$ and a decaying mode $D^{(-)}$. 
+The decaying mode decreases with time so, in the late Universe, only the
+growing mode is observable. One common observable used to quantify the 
+evolution of $D^{(+)}$ is 
 \beq
+f = \frac{ d {\rm ln}\;D^{(+)}}{d {\rm ln}\;a}. 
 \eeq
-to derive 
-\beq
-\eeq
-(see \todo{cite Dodelson} for detailed derivation). 
+This growth rate of structure will be discussed further in Section~\ref{sec:rsd}.
 
-
+Now that we understand how the density fluctuations gravitationally evolves, 
+I will explain how the density flucations evolve since 
 \begin{itemize}
 {\item 
 talk about growth of density fluctuations from gravitational instability
@@ -113,7 +127,7 @@ talk about galaxy bias
 }
 \end{itemize}
 
-\section{Redshift-Space Distortions}
+\section{Redshift-Space Distortions} \label{sec:rsd}
 Spectroscopic redshift surveys such as BOSS catalog the angular positions (right ascension 
 and declination) and redshifts of galaxies in the sky. 
 

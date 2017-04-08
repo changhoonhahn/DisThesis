@@ -23,7 +23,7 @@ exploited these galactic beacons to map out the cosmic structure
 of the Universe. Precise measurements of distance and growth 
 of large-scale structure (LSS) from these surveys, provide tests 
 of cosmological models that desribe the content, geometry and history 
-of the Universe. By analyzing measurements of LSS,  
+of the Universe. \todo{By analyzing measurements of LSS,}
 
 
 Through these galaxies, we can explore the properties of the underlying dark matter
@@ -47,25 +47,25 @@ questions that I seek to answer in my dissertation.
 
 %\section{$\Lambda$CDM cosmology}
 \section{Large Scale Structure}
-Primordial quantum fluctuations grow through gravitational instability into 
-the large-scale structures of the nearby Universe. In this section, I briefly 
-describe the simplified theory of this process, introduce key terminology, and 
-explain core concepts of LSS cosmology using galaxies.
-
-Lets begin by defining the matter overdensity field at comoving position 
-${\bf r}$ as
-\beq
+From the early Universe, primordial quantum fluctuations grow into the 
+large-scale structures of the Universe we observe today through the different
+epochs of cosmic history and by gravitational instability. In this section, I briefly 
+describe the simplified ({\em linear}) theory of this evolution and explain core 
+concepts of LSS cosmology using galaxies. Lets begin by defining the matter 
+overdensity field (or density fluctuation) at comoving position ${\bf r}$: 
+\beq \label{eq:delta}
 \delta({\bf r}) = \frac{\rho({\bf r}) - \bar{\rho}}{\bar{\rho}}, 
 \eeq
-where $\rho({\bf r})$ and $\bar{\rho}$ represent the density field and mean 
-density respectively. The Fourier transform of this overdensity field is 
-simply 
+where $\rho({\bf r})$ and $\bar{\rho}$ are the density field and mean 
+density respectively. In Fourier space ($k$-space), Eq.~\ref{eq:delta} can 
+be Fourier transformed, 
 \beq
 \delta({\bf k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3} e^{-i{\bf k}\dot{\bf r}}\;\delta({\bf r}).
 \eeq
-Fourier space ($k$-space) is generally favored over configuration space for 
-describing the evolution of the overdensity field because the Fourier modes 
-of $\delta$ evolve independently in linear theory -- \emph{i.e.} on large scales.
+For describing the evolution of the overdensity field, Fourier space is generally 
+favored over configuration space because, as derived later in the section,
+the Fourier modes of $\delta$ evolve independently in linear theory -- 
+\emph{i.e.} on large scales.
 
 The information in the overdensity field is often quantified using its 
 $N$-point statistics (\todo{cite Peebles bernardeua}). In fact, the two-point
@@ -85,8 +85,8 @@ information. In practice, however, analyzing $\xi$ versus $P(k)$ carry different
 caveats (\todo{cite FKP}). Throughout this section, and also the dissertation, 
 I will mainly focus on the powerspectrum. 
 
-The evolution of the dark matter overdensity field can be derived as follows 
-(on sub-horizon scales). For pressureless dark matter, the equation of motion
+The evolution of the dark matter overdensity field can be derived (on 
+sub-horizon scales) as follows. For pressureless dark matter, the equation of motion
 can be derived from the continuity, Euler, and Poisson equations
 \beqa 
 \frac{\partial \rho}{\partial t} + \nabla \dot \rho {\bf u} = 0  \\ 
@@ -99,26 +99,58 @@ to
 \eeq
 ${\bf u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
 is the scale factor. For a detailed derivation I refer readers to \todo{cite Peebles 
-or Dodelson}. If the overdensity is written as  
+or Dodelson}. Eq.~\ref{eq:meszaros} a second order differential equation, therefore,
+the solution can be written as 
 \beq
-\delta({\bf r}, t) = D(t) \delta({\bf r}, t=0), 
+\delta({\bf r}, t) = D^{(+)}(t) A({\bf r}) + D^{(-)}(t) B({\bf r}).
 \eeq
-then the second order differential equation of Eq.~\ref{eq:meszaros} has two 
-independent solutions: a growing mode $D^{(+)}$ and a decaying mode $D^{(-)}$. 
-The decaying mode decreases with time so, in the late Universe, only the
-growing mode is observable. One common observable used to quantify the 
-evolution of $D^{(+)}$ is 
+The density flucation has two components: a growing mode $D^{(+)}$ and a decaying 
+mode $D^{(-)}$. The decaying mode decreases with time and its contribution becomes negligible
+leaving only the growing mode in the late Universe. Now in order to quantify
+the evolution of the growing mode $D^{(+)}$, one commonly used quantity is the 
+``growth rate of structure'': 
 \beq
 f = \frac{ d {\rm ln}\;D^{(+)}}{d {\rm ln}\;a}. 
 \eeq
-This growth rate of structure will be discussed further in Section~\ref{sec:rsd}.
+This growth rate of structure is a key quantity in LSS cosmology for testing different 
+cosmological models and theories of gravity. $f$ will be discussed further in Section~\ref{sec:rsd}.
 
-Beyond the evolution of density fluctuations from gravity, the fluctiations also 
-evolve as it goes through the different epochs of the Universe: inflationary, 
-radiation dominated, and matter dominated epochs (see Fig.~\ref{fig:lifo}). 
-Without delving into much of the details, lets start from inflation. The Hubble 
-radius, the surface at which the recession velocity is equal to the speed of light, 
-will be used to describe \todo{the physical scale of the Universe at different epochs}. 
+From the early Universe the density fluctuations evolve through different epochs in 
+cosmic history: inflation, radiation-dominated, and matter-dominated eras. Each of 
+these periods leave an imprint on the evolution of $\delta$. Fig.~\ref{fig:lifo}, 
+marks the different eras in the early Universe and plots how the physical scale of 
+the Universe, represented by the Hubble radius, evolves with $a$. 
+
+During inflation, the Hubble radius remains constant. Afterwards the Universe 
+becomes radiation dominated. Based on the Friedmann equations the Hubble radius 
+during the radiation dominated era is approximately $\propto a^{2}$. The Universe then 
+becomes matter dominated and the Hubble radius is approximately $\propto a^{3/2}$. 
+Meanwhile, the physical scale of perturbations is 
+$\lambda_{phys} = \lambda_{comov}\ a(t) \propto a(t)$. As Fig.~\ref{fig:lifo} 
+illustrates, perturbations exit the Hubble radius during inflation then 
+reenter the Hubble radius later on. Depending on the physical scale of the 
+perturbation, it can enter either during the radiation dominated  
+(smaller scale) or matter dominated (larger scale) era. 
+
+The smaller scale perturbations that enter during the radiation dominated
+era \todo{explain the supression}. 
+On the other side, the larger scale perturbations that enter during the
+matter dominated epoch \todo{explain the lack of suppression}
+In practice, this scale dependent evolution of the density fluctuation is 
+quantified through the ``transfer function'' $T(k)$. 
+
+After inflation the powerspectrum of the density fluctation is scale-invariant
+\beq
+P_{inf}(k) \prop k^{n_s}
+\eeq
+where $n_s \sim 1$ \todo{cite inflation papers}. 
+ 
+
+%Now that we understand how the density fluctuations gravitationally evolves, 
+%I will explain how the density flucations evolve  
+%These codes calculate so called the ‘transfer function’ T (k). The trans- fer function T (k) encodes the evolution of density perturbation throughout the matter-radiation equality and CMB last scattering.
+
+%the Hubble radius, the surface at which the recession velocity is equal to the speed of light, will be used to describe \todo{the physical scale of the Universe at different epochs}. 
 
 \begin{figure*}
 \begin{center}
@@ -133,18 +165,6 @@ of inflation (open circle).
 } \label{fig:lifo}
 \end{center}
 \end{figure*}
-
-During inflation, the Hubble radius remains constant. Following inflation the
-Universe is radiation dominated and based on solving the Friedmann equations 
-the Hubble radius approximately $\propto a^{2}$. Afterwards, the Universe is
-matter dominated and the Hubble radius is approximately $\propto a^{3/2}$. 
-Meanwhile, the physical scale of perturbations is 
-$\lambda_{phys} = \lambda_{comov} a(t)$ and hence $\propto a(t)$.
-As Fig.~\ref{fig:lifo} illustrates, 
-
-%Now that we understand how the density fluctuations gravitationally evolves, 
-%I will explain how the density flucations evolve  
-%These codes calculate so called the ‘transfer function’ T (k). The trans- fer function T (k) encodes the evolution of density perturbation throughout the matter-radiation equality and CMB last scattering.
 
 \begin{itemize}
 {\item

@@ -132,10 +132,12 @@ reenter the Hubble radius later on. Depending on the physical scale of the
 perturbation, it can enter either during the radiation dominated  
 (smaller scale) or matter dominated (larger scale) era. 
 
-The perturbations that enter before the matter-radiation equality ($a(t) = a_{eq}$), 
-during the radiation dominated era, have physical scales 
-$\lambda_{phys} < \lambda_{eq} \propto a_{eq}$. These smaller scale perturbations, 
-todo{explain the supression} 
+
+The physical scale of perturbations that enter the horizon at the time of 
+matter-radiation equality ($a(t) = a_{eq}$), $\lambda_{eq}$ is $\sim 500 h^{-1}Mpc$.
+The perturbations that enter before the matter-radiation equality during 
+the radiation dominated era, have physical scales $\lambda_{phys} < \lambda_{eq}$. 
+These smaller scale perturbations, todo{explain the supression} 
 On the other side, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
 enter after matter-radiation equality during the matter dominated epoch. These 
 perturbations do {\em not} experience the suppression of growth of the radiation 
@@ -147,12 +149,12 @@ In practice, this scale dependent evolution of the density fluctuation is
 quantified through the ``transfer function'' $T(k)$ (\todo{cite all the transfer function papers}). After inflation the 
 powerspectrum of the density fluctation can be summarized by: 
 \beq
-P_{inf}(k) \prop k^{n_s}
+P_{inf}(k) \propto k^{n_s}
 \eeq
-where $n_s \sim 1$ \todo{cite inflation papers}. Then powerspectrum of the density 
+where $n_s \sim 1$ \todo{cite inflation papers: Harrison (1970), Zel’dovich (1972) and Peebles Yu (1970) Komatsu et al. 2011}. Then powerspectrum of the density 
 fluctuation in the late Universe can be expressed as 
 \beq
-P(k) \prop k^{n_s} T^2(k) D^2(k). 
+P(k) \propto k^{n_s} T^2(k) D^2(k). 
 \eeq
 $D(k) \equiv D^(+)$ from earlier this section. 
 
@@ -189,14 +191,20 @@ approximated by a local function of the matter density field
 \eeq
 This function can then be expanded Taylor series,
 \beq
-\delta_g({\bf r}) = \sum\limits_{k=0}^{\infty}\delta({\bf r} ). 
+\delta_g({\bf r}) = \sum\limits_{k=0}^{\infty} \frac{b_k}{k!} \delta^k. 
 \eeq
+$b_1$ is referred to as the linear bias factor and $b_0$ is chosen so that
+$<\delta_g> = 0$. To linear order, 
+\beq
+P_g(k) = b_1^2 P(k). 
+\eeq
+For galaxies, $b_1 > 1$ (\todo{cite Zehavi 2005, Sheldon 2009, Gastanage 2009}). 
+Galaxies are {\em biased} tracers of the matter distribution because luminous galaxies
+reside in larger potential wells and more massive overdensities have stronger
+clustering properties than than less massive ones (\todo{manera 2010}). 
+%indicating brighter objects reside in larger potential wells, as there was more infall of gas. N−body simulation analyses find that larger dark matter halos have stronger clustering properties than less massive
 
-\begin{itemize}
-{\item
-talk about galaxy bias  
-}
-\end{itemize}
+\todo{insert transition to redshift space distortions here} 
 
 \section{Redshift-Space Distortions} \label{sec:rsd}
 Spectroscopic redshift surveys such as BOSS catalog the angular positions (right ascension 

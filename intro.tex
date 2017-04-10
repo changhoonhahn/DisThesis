@@ -101,7 +101,7 @@ ${\bf u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$
 is the scale factor. For a detailed derivation I refer readers to \todo{cite Peebles 
 or Dodelson}. Eq.~\ref{eq:meszaros} a second order differential equation, therefore,
 the solution can be written as 
-\beq
+\beq 
 \delta({\bf r}, t) = D^{(+)}(t) A({\bf r}) + D^{(-)}(t) B({\bf r}).
 \eeq
 The density flucation has two components: a growing mode $D^{(+)}$ and a decaying 
@@ -132,25 +132,29 @@ reenter the Hubble radius later on. Depending on the physical scale of the
 perturbation, it can enter either during the radiation dominated  
 (smaller scale) or matter dominated (larger scale) era. 
 
-The smaller scale perturbations that enter during the radiation dominated
-era \todo{explain the supression}. 
-On the other side, the larger scale perturbations that enter during the
-matter dominated epoch \todo{explain the lack of suppression}
-In practice, this scale dependent evolution of the density fluctuation is 
-quantified through the ``transfer function'' $T(k)$. 
+The perturbations that enter before the matter-radiation equality ($a(t) = a_{eq}$), 
+during the radiation dominated era, have physical scales 
+$\lambda_{phys} < \lambda_{eq} \propto a_{eq}$. These smaller scale perturbations, 
+todo{explain the supression} 
+On the other side, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
+enter after matter-radiation equality during the matter dominated epoch. These 
+perturbations do {\em not} experience the suppression of growth of the radiation 
+dominated era. Therefore, as the overdensity field goes through these epochs, its 
+growth on small scale is suppressed by a factor of $\sim k^4$.  
 
-After inflation the powerspectrum of the density fluctation is scale-invariant
+
+In practice, this scale dependent evolution of the density fluctuation is 
+quantified through the ``transfer function'' $T(k)$ (\todo{cite all the transfer function papers}). After inflation the 
+powerspectrum of the density fluctation can be summarized by: 
 \beq
 P_{inf}(k) \prop k^{n_s}
 \eeq
-where $n_s \sim 1$ \todo{cite inflation papers}. 
- 
-
-%Now that we understand how the density fluctuations gravitationally evolves, 
-%I will explain how the density flucations evolve  
-%These codes calculate so called the ‘transfer function’ T (k). The trans- fer function T (k) encodes the evolution of density perturbation throughout the matter-radiation equality and CMB last scattering.
-
-%the Hubble radius, the surface at which the recession velocity is equal to the speed of light, will be used to describe \todo{the physical scale of the Universe at different epochs}. 
+where $n_s \sim 1$ \todo{cite inflation papers}. Then powerspectrum of the density 
+fluctuation in the late Universe can be expressed as 
+\beq
+P(k) \prop k^{n_s} T^2(k) D^2(k). 
+\eeq
+$D(k) \equiv D^(+)$ from earlier this section. 
 
 \begin{figure*}
 \begin{center}
@@ -166,10 +170,29 @@ of inflation (open circle).
 \end{center}
 \end{figure*}
 
-\begin{itemize}
-{\item
-talk about the shape of the powerspectrum at low redshift (inflation + transfer function)
+\todo{paragraph about how because D and T depend on cosmological parameters 
+    so powerspectrum measurements of the matter density fluctuation can be 
+    used a tests of the cosmological models.
 }
+So powerspectrum measurements of the matter density fluctuations can be compared
+to predictions of various cosmological models in order to produce constraints 
+on cosmological parameters, better understand dark energy, and test theories of 
+gravity. Unfortunately, most of the matter in the Universe is in the form of dark 
+matter and does not interact with radiation. 
+
+Observers cannot measure the spatial statistics (or clustering) of dark matter 
+directly. Instead, we measure the clustering of galaxies and quasars, which trace
+the underlying matter distribution. The smoothed galaxy/quasar density field is 
+approximated by a local function of the matter density field
+\beq
+\delta_g({\bf r}) = F( \delta({\bf r} ). 
+\eeq
+This function can then be expanded Taylor series,
+\beq
+\delta_g({\bf r}) = \sum\limits_{k=0}^{\infty}\delta({\bf r} ). 
+\eeq
+
+\begin{itemize}
 {\item
 talk about galaxy bias  
 }

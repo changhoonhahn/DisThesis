@@ -46,7 +46,7 @@ questions that I seek to answer in my dissertation.
 
 
 %\section{$\Lambda$CDM cosmology}
-\section{Large Scale Structure}
+\section{Large Scale Structure} \label{sec:lss}
 From the early Universe, primordial quantum fluctuations grow into the 
 large-scale structures of the Universe we observe today through the different
 epochs of cosmic history and by gravitational instability. In this section, I briefly 
@@ -109,7 +109,7 @@ mode $D^{(-)}$. The decaying mode decreases with time and its contribution becom
 leaving only the growing mode in the late Universe. Now in order to quantify
 the evolution of the growing mode $D^{(+)}$, one commonly used quantity is the 
 ``growth rate of structure'': 
-\beq
+\beq \label{eq:f_growth}
 f = \frac{ d {\rm ln}\;D^{(+)}}{d {\rm ln}\;a}. 
 \eeq
 This growth rate of structure is a key quantity in LSS cosmology for testing different 
@@ -198,54 +198,117 @@ $<\delta_g> = 0$. To linear order,
 \beq
 P_g(k) = b_1^2 P(k). 
 \eeq
-For galaxies, $b_1 > 1$ (\todo{cite Zehavi 2005, Sheldon 2009, Gastanage 2009}). 
-Galaxies are {\em biased} tracers of the matter distribution because luminous galaxies
-reside in larger potential wells and more massive overdensities have stronger
-clustering properties than than less massive ones (\todo{manera 2010}). 
-%indicating brighter objects reside in larger potential wells, as there was more infall of gas. N−body simulation analyses find that larger dark matter halos have stronger clustering properties than less massive
+The primary subpopulation of galaxies used so far for LSS studies are luminous 
+red galaxies (\todo{Eistenstien apper}). These galaxies have $b_1 > 1$, which 
+means they are {\em biased} tracers of the matter distribution (\todo{cite Zehavi 2005, Sheldon 2009, Gastanage 2009}). 
+This bias is caused by the fact that luminous galaxies reside in larger potential 
+wells, which have stronger clustering properties than than less massive ones (\todo{manera 2010}). 
 
-\todo{insert transition to redshift space distortions here} 
+Based on the simplified derivation of this section, once we have the spatial 
+distribution of galaxies or quasars we can derive the clustering of the matter
+distribution and then infer cosmological constraints. In practice, however, a
+number of factors complicate this procedure. One key complication is redshift-space
+distortions, which will be discussed in the following section.
 
 \section{Redshift-Space Distortions} \label{sec:rsd}
-Spectroscopic redshift surveys such as BOSS catalog the angular positions (right ascension 
-and declination) and redshifts of galaxies in the sky. 
+Spectroscopic redshifts surveys, such as 2dFGRS, SDSS, and BOSS, have mapped out
+millions of distant galaxies. Current surveys such as Extended Baryon Oscillation 
+Spectroscopic Survey (eBOSS; \citealt{Dawson:2015aa}), and future surveys such as 
+the Dark Energy Survey Instrument (DESI; \citealt{Schlegel:2011aa, Morales:2012aa, Makarem:2014aa}) 
+and the Subaru Prime Focus Spectrograph (PFS; \citealt{Takada:2014aa}), will 
+continue to map out millions more. These surveys dominate LSS studies and have/will 
+been critical for inferring precise cosmological constraints. As their name suggest, 
+however, these {\em redshift} surveys do not directly measure the position of 
+galaxies, but rather the angular positions (right ascension and declination) and
+redshift of galaxies. 
 
+Redshifts from spectroscopic surveys observe the combination of recession 
+velocities due to the expansion of the Universe and the peculiar velocities of the galaxies 
 \beq
-z_{obv} = z_{true} +  \frac{v_{pec}}{c}
+z_{obv} = z_{true} +  \frac{v_{pec}}{c}.
+\eeq 
+The comoving positions derived from the angular positions and redshifts are then
+in {\em redshift-space} and ``distorted'' compared to real-space comoving positions:
+\beq
+{\bf s} = {\bf x} +  \frac{{\bf v}_{pec} \cdot \hat{n}}{H_0}.
+\eeq 
+$\hat{n}$ is the unit vector along the line-of-sight. Thankfully, all hope is not 
+lost. The peculiar velocities of galaxies should be directly related to the total 
+matter distribution, since galaxies can be thought of as test particles in a 
+gravitational field. 
+
+\todo{Kaiser 87} derives an approximation for the distortion caused by the coherent 
+infall of galaxies onto over dense regions in redshift space. This redshift-space 
+distortion (RSD), often referred to as the Kaiser effect, causes overdense regions
+to appear squashed along the line of sight in redshift space. Galaxies around an
+overdense region closest to the observer (us) are moving towards the center of the 
+overdense region, so they appear in redshift-space to be farther away. Galaxies 
+on the other side of the overdense region are moving towards it and the observer, 
+so they appear closer to us. 
+
+More precisely, the relation between the overdensity field in redshift-space can be 
+derived from the continuity equation and the distant observer approximation, 
+\beq
+\delta^{(s)}({\bf k}) = (1 + f \mu^2) \delta({\bf k}).
+\eeq
+$f$ here is the growth rate of structure from Eq.~\ref{eq:f_growth} and 
+$\mu = {\bf k} \cdot \hat{n} / k$, cosine of the angle between $k$ and 
+the line of sight. 
+
+The Kaiser effect can be combined with the galaxy bias model from 
+Section~\ref{sec:lss}, in order to express the galaxy overdensity field in 
+redshift-space:
+\beq
+\delta_g^{(s)}({\bf k}) = (b + f \mu^2) \delta({\bf k}).
+\eeq
+The redshift-space powerspectrum of the galaxy overdensity field can then be
+written as 
+\beq
+P_g^{(s)}(k, \mu) = (b + f \mu^2)^2 P(k).
+\eeq
+On large scales and with small overdensities, the effect of redshift-space 
+distoritons is well described by the Kaiser effect. On small scales with large
+overdensities things get a little more complicated. 
+
+The random peculiar velocities of galaxies in gravitationally bound structures 
+such as clusters cause their position in redshift-space along the line-of-sight 
+to be smeared out to larger scales.  This effect can easily be identified by 
+eye in galaxy redshift maps. The elongations of the galaxy positions along the 
+line-of-sight look like fingers pointing towards the observer. Hence this 
+redshift-space distorion is called the ``fingers-of-god''. Its impact on the 
+powerspectrum, is typically quantified using an overall exponential factor such as 
+\beq
+P_g^{(s)}(k, \mu) \approx e^{-f^2 \sigma_v^2 \mu^2 k^2} (b + f \mu^2)^2 P(k).
+\eeq
+$\sigma_v$ is a paramter quantifying the strength of the effect and is usually
+left as a free parameter. 
+
+The relations that quantify the impact of RSDs reveal another means of measuring 
+$f$. Consider the Legendre expansion of $P_g^{(s)}(k, \mu)$, 
+\beq
+P_g^{(s)}(k, \mu) = \sum\limits_{\ell=0, 2, 4 ...} \mathcal{L}_\ell(\mu) P
 \eeq
 
-Kaiser Effect
-\beq
-\delta^{(s)}({\bf k}) = (1 + f \mu_k^2) \delta({bf k})
-\eeq
-\beq
-\delta_g^{(s)}({\bf k}) = (b + f \mu_k^2) \delta({bf k})
-\eeq
-\beq
-P_g^{(s)}(k) = (b + f \mu_k^2)^2 P(k)
-\eeq
 
 \beq
-\mu = \hat{z} \odot \hat{k} 
+P_g^{\ell}(k) = \frac{2 \ell + 1}{2} \int\limit_{-1}^{1} {\rm d}\mu \; P_g^{(s)}(k, \mu) \mathcal{L}_\ell(\mu).
 \eeq
-
-Fingers of God 
+The $\ell= 0$ and $2$ ``multipoles'' of this expansion, neglecting the figers-of-god 
+for larger scales, are
+\beqa
+P_g^0 (k) = (b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2) P(k) \\
+P_g^2 (k) = (\frac{4}{3} f b_1 + \frac{4}{7} f^2) P(k). 
+\eeqa
+Then, the ratio of the monopole ($\ell = 0$) and quadrupole ($\ell = 2$) is
 \beq
-P_g^{(s)}(k) = e^{-f^2 \sigma_v^2 \mu^2 k^2} (b + f \mu^2)^2 P(k)
+\frac{P_g^2}{P_g^0} = \frac{\frac{4}{3} f b_1 + \frac{4}{7} f^2}{b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2}
 \eeq
 
-% redshift space distorted p(k)
-% bispectrum intro
-% brief neutrino mass  
+Using the general description and derivation of the redshift-space galaxy 
+powerspectrum, the standard analysis of galaxy clustering in LSS studies can 
+be outlined. 
 
-
-Redshifts measure both the velocity due to cosmic expansion and the peculiar velocities driven by gravitational attraction from LSS. 
-The peculiar velocity component anisotropically ``distorts'' redshift-space galaxy clustering. 
-Measuring this redshift-space distortion (RSD) allows us to infer the growth of structure, which we can then use to test GR and modified gravity scenarios. 
-Galaxy clustering also provides a unique window to probe fundamental physics {\em i.e.} \mneut. 
-Neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. 
-From the imprints on galaxy clustering, we can place limits on \mneut. 
-
+%The peculiar velocity component anisotropically ``distorts'' redshift-space galaxy clustering. Measuring this redshift-space distortion (RSD) allows us to infer the growth of structure, which we can then use to test GR and modified gravity scenarios. Galaxy clustering also provides a unique window to probe fundamental physics {\em i.e.} \mneut. Neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. From the imprints on galaxy clustering, we can place limits on \mneut. 
 \section{Galaxy Clustering Analysis}%Galaxy-Halo Connection}
 
 \begin{enumerate}

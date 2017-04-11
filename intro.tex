@@ -305,17 +305,27 @@ Their ratio
 illustrates how the distortions caused by RSDs allow us to extract information of 
 $f$ through measurements of the redshift-space galaxy powerspectrum!  
 
-%By measuring the multipoles of the redshift-space galaxy powerspectrum from galaxy redshift surveys, remarkably, RSDs can be used to measure $f$!
-Beyond the general description and derivation of the redshift-space galaxy 
-powerspectrum, the rest of galaxy clustering analyses in LSS studies follow 
-the standard approach to Bayesian parameter inference. Bayes rule states, 
+%Beyond the general description and derivation of the redshift-space galaxy powerspectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
+The ultimate goal of galaxy clustering analyses is to derive constraints on cosmological 
+parameters and models from observed measurements of galaxly clustering -- the probability 
+distribution of the cosmological parameters given observations. The standard approach
+to deriving this {\em posterior} probability distribution is using Bayesian parameter
+inference.  Based on Bayes theorem, the posterior is 
 \beq
-Bayes
+P({\bf \theta}| {\bf D}) = \frac{P({\bf D}|{\bf \theta}) P({\bf \theta})}{P({\bf D})}.
 \eeq
-\todo{derive posterior distribution and define likelihoods and etc.}
+${\bf D}$ and ${\bf \theta}$ refer to observations and cosmological parameters, respectively. 
+$P({\bf D}|{\bf \theta})$, the probability of observing ${\bf D}$ given model 
+parameters ${\bf \theta}$ is the {\em likelihood function}, $\mathcal{L}$. $P({\bf \theta})$ is 
+the {\em prior} probability distribution. Lastly, $P({\bf D})$ is the ``evidence''. 
+Since the evidence does not depend on ${\bf theta}$ it is just a normalization 
+factor, so the equation above is more simply,  
+\beq \label{eq:bayes} 
+P({\bf \theta}| {\bf D}) \propto P({\bf D}|{\bf \theta}) P({\bf \theta}). 
+\eeq
 
-In galaxy clustering analyses, the liklihood is {\em typically} assumed to 
-have Gaussian function form and written as 
+The likelihood, in galaxy clustering analyses, is {\em typically} assumed to have 
+Gaussian function form and calculated as 
 \beq
 \mathcal{L} = stuff. 
 \eeq

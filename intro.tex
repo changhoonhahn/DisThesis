@@ -305,6 +305,7 @@ Their ratio
 illustrates how the distortions caused by RSDs allow us to extract information of 
 $f$ through measurements of the redshift-space galaxy powerspectrum!  
 
+\section{Galaxy Clustering Analyses}%Galaxy-Halo Connection}
 %Beyond the general description and derivation of the redshift-space galaxy powerspectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
 The ultimate goal of galaxy clustering analyses is to derive constraints on cosmological 
 parameters and models from observed measurements of galaxly clustering -- the probability 
@@ -315,23 +316,32 @@ inference.  Based on Bayes theorem, the posterior is
 P({\bf \theta}| {\bf D}) = \frac{P({\bf D}|{\bf \theta}) P({\bf \theta})}{P({\bf D})}.
 \eeq
 ${\bf D}$ and ${\bf \theta}$ refer to observations and cosmological parameters, respectively. 
-$P({\bf D}|{\bf \theta})$, the probability of observing ${\bf D}$ given model 
-parameters ${\bf \theta}$ is the {\em likelihood function}, $\mathcal{L}$. $P({\bf \theta})$ is 
-the {\em prior} probability distribution. Lastly, $P({\bf D})$ is the ``evidence''. 
-Since the evidence does not depend on ${\bf theta}$ it is just a normalization 
-factor, so the equation above is more simply,  
+$P({\bf D}|{\bf \theta})$, the probability distribution function for the observation ${\bf D}$ 
+given model parameters ${\bf \theta}$ -- {\em i.e. likelihood function}, $\mathcal{L}$. 
+$P({\bf \theta})$ is the {\em prior} probability distribution function. Lastly, $P({\bf D})$ 
+is the ``evidence'', which for our purposes, is just a normalization factor independent of
+${\bf theta}$. More commonly the equation above is more simply written 
 \beq \label{eq:bayes} 
-P({\bf \theta}| {\bf D}) \propto P({\bf D}|{\bf \theta}) P({\bf \theta}). 
+P({\bf \theta}| {\bf D}) &\propto& P({\bf D}|{\bf \theta}) P({\bf \theta}) \\
+{\rm posterior} &\propto& {\rm likelihood}\; \times \; {prior}.
 \eeq
 
-The likelihood, in galaxy clustering analyses, is {\em typically} assumed to have 
-Gaussian function form and calculated as 
+In the context of galaxy clustering analyses and LSS cosmology in general, the likelihood 
+function is {\em typically} assumed to have Gaussian function form and calculated as 
 \beq
-P({\bf D}|{\bf \theta}) = \mathcal{L} = \frac{1}{(2\pi)^{N/2} det{\bf C})^{1/2}}\; {\rm exp}\left( -\frac{1}{2} ({\bf D} - f({\bf \theta}))^T {\bf C}^{-1} ({\bf D} - f({\bf \theta}))\right).
+P({\bf D}|{\bf \theta}) = \mathcal{L} = \frac{1}{(2\pi)^{N_d/2} {\rm det}{\bf C}^{1/2}}\; {\rm exp}\left[ -\frac{1}{2} ({\bf D} - F({\bf \theta}))^T {\bf C}^{-1} ({\bf D} - F({\bf \theta}))\right].
 \eeq
-\todo{Talk about the difference between the model and observations. 
-Then talk about the covariance matrix. Say what it is qualatatively.}
+$D$ is data from observations with dimension $N_d$. $F({\bf \theta})$ is the model prediction 
+of the observable generated from cosmological parameters ${\bf \theta}$. And ${\bf C}$ is 
+the covariance matrix. $D$ is observed and measured from galaxy surveys. $F({\bf \theta})$
+is broadly described by the derivations earlier this section. The covariance matrix ${\bf C}$
+can be estimated using a number of different methods. 
 
+Efforts to analytically estimate the covariance matrix from theory have been made in the past
+(Hamilton, Rimes & Scoccimarro 2006; Sefusatti et al. 2006; Pope & Szapudi 2008; de Putter et al. 2012). 
+However, non-linear evolution, shot-noise, RSDs, and mapping between 
+galaxies and matter, complicate accurate estimations. 
+As a result, analytically estimating ${\bf C}$ has fallen out of favor.
 \todo{paragraph about how covariance matrices for LSS analysis are derived
 using thousands of mock catalogs (hartlap 2007).}
 
@@ -340,7 +350,6 @@ of the model is derived. \todo{brief overview of the latest constraints from
 BOSS to summarize the state of the field now.} 
 
 %The peculiar velocity component anisotropically ``distorts'' redshift-space galaxy clustering. Measuring this redshift-space distortion (RSD) allows us to infer the growth of structure, which we can then use to test GR and modified gravity scenarios. Galaxy clustering also provides a unique window to probe fundamental physics {\em i.e.} \mneut. Neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. From the imprints on galaxy clustering, we can place limits on \mneut. 
-\section{Beyond Standard Galaxy Clustering Analysis}%Galaxy-Halo Connection}
 
 \begin{enumerate}
 {\item 

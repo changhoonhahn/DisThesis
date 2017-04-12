@@ -305,7 +305,17 @@ Their ratio
 illustrates how the distortions caused by RSDs allow us to extract information of 
 $f$ through measurements of the redshift-space galaxy powerspectrum!  
 
-\section{Galaxy Clustering Analyses}%Galaxy-Halo Connection}
+\section{Weighting Neutrinos with Galaxies} \label{sec:mneut}
+Beyond providing a way to infer the growth rate of structure, which 
+can be used to test GR and modified gravity scenarios, galaxy clustering
+also provides a unique window to probe fundamental physics beyond the 
+standard model. 
+
+In the derivations of earlier this chapter, we focused on how the matter
+density fluctuations of dark matter evolves. 
+\todo{a few paragraphs about the impact of neutrinos of galaxy clustering. how neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. From the imprints on galaxy clustering, we can place limits on \mneut. }
+
+\section{Analyzing Galaxy Clustering}
 %Beyond the general description and derivation of the redshift-space galaxy powerspectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
 The ultimate goal of galaxy clustering analyses is to derive constraints on cosmological 
 parameters and models from observed measurements of galaxly clustering -- the probability 
@@ -321,47 +331,70 @@ given model parameters ${\bf \theta}$ -- {\em i.e. likelihood function}, $\mathc
 $P({\bf \theta})$ is the {\em prior} probability distribution function. Lastly, $P({\bf D})$ 
 is the ``evidence'', which for our purposes, is just a normalization factor independent of
 ${\bf theta}$. More commonly the equation above is more simply written 
-\beq \label{eq:bayes} 
+\beqa \label{eq:bayes} 
 P({\bf \theta}| {\bf D}) &\propto& P({\bf D}|{\bf \theta}) P({\bf \theta}) \\
 {\rm posterior} &\propto& {\rm likelihood}\; \times \; {prior}.
-\eeq
+\eeqa
 
 In the context of galaxy clustering analyses and LSS cosmology in general, the likelihood 
 function is {\em typically} assumed to have Gaussian function form and calculated as 
-\beq
+\beq \label{eq:likelihood}
 P({\bf D}|{\bf \theta}) = \mathcal{L} = \frac{1}{(2\pi)^{N_d/2} {\rm det}{\bf C}^{1/2}}\; {\rm exp}\left[ -\frac{1}{2} ({\bf D} - F({\bf \theta}))^T {\bf C}^{-1} ({\bf D} - F({\bf \theta}))\right].
 \eeq
-$D$ is data from observations with dimension $N_d$. $F({\bf \theta})$ is the model prediction 
+${\bf D}$ is data from observations with dimension $N_d$. $F({\bf \theta})$ is the model prediction 
 of the observable generated from cosmological parameters ${\bf \theta}$. And ${\bf C}$ is 
-the covariance matrix. $D$ is observed and measured from galaxy surveys. $F({\bf \theta})$
+the covariance matrix. ${\bf D}$ is observed and measured from galaxy surveys. $F({\bf \theta})$
 is broadly described by the derivations earlier this section. The covariance matrix ${\bf C}$
 can be estimated using a number of different methods. 
 
 Efforts to analytically estimate the covariance matrix from theory have been made in the past
-(Hamilton, Rimes & Scoccimarro 2006; Sefusatti et al. 2006; Pope & Szapudi 2008; de Putter et al. 2012). 
-However, non-linear evolution, shot-noise, RSDs, and mapping between 
-galaxies and matter, complicate accurate estimations. 
-As a result, analytically estimating ${\bf C}$ has fallen out of favor.
-\todo{paragraph about how covariance matrices for LSS analysis are derived
-using thousands of mock catalogs (hartlap 2007).}
+(Hamilton, Rimes Scoccimarro 2006; Sefusatti et al. 2006; Pope Szapudi 2008; de Putter et al. 2012). 
+Non-linear evolution, shot-noise, RSDs, and mapping between galaxies and matter, however,
+complicate accurate estimations. Jack-knife resampling is another method for estimating 
+covariances -- directly from data (Krewski 1981; Shao and Tu 1995). However, the method 
+requires a number of arbitrary choices and cannot account for fluctuations on the scale 
+of the survey (Norberg 2009). Instead, the latest analysis have estimated the ${\bf C}$ 
+from a large number of galaxy mock catalogs generated from $N$-body simulations. For 
+accurate estimation, typically, an order of $\sim 1000$ mock galaxy catalogs are used (\todo{Anderson, Beutler, DR13 papers}).
+In fact, developing fast and accurate galaxy mock catalogs is a subfield of its own 
+(\todo{cite a bunch of mock catalog papers}). 
 
-Using the above likelihood, the posterior distribution of the parameters
-of the model is derived. \todo{brief overview of the latest constraints from 
-BOSS to summarize the state of the field now.} 
+From ${\bf D}$, $F(\boldsymbol{\theta})$, and ${\bf C}$ we have the likelihood of 
+Eq.~\ref{eq:likelihood}. As an added detail, the ${\bf C}$ estimate from above is 
+biased depending on factors such as $N_d$ \citep{hartlap2007}. Standard analyses 
+include a correction -- the Hartlap factor -- to the covariance matrix estimate. Once the 
+likelihood is evaluated, since the prior probability distribution is chosen, the posterior 
+probability distribution functions of the cosmological parameters is essentially already 
+evaluated. In practice, instead of evaluating the posterior distribution at all points in 
+parameter space, the distribution is sampled using a sampler such as a Markov Chain Monte 
+Carlo (MCMC) sampler -- \emph{e.g.} $\mathtt{emcee}$ \citep[][]{emcee}.
 
-%The peculiar velocity component anisotropically ``distorts'' redshift-space galaxy clustering. Measuring this redshift-space distortion (RSD) allows us to infer the growth of structure, which we can then use to test GR and modified gravity scenarios. Galaxy clustering also provides a unique window to probe fundamental physics {\em i.e.} \mneut. Neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. From the imprints on galaxy clustering, we can place limits on \mneut. 
+Using the elements of galaxy clustering analysis I describe in this chapter, the latest
+galaxy surveys have produced remarkable constraints on cosmological parameters. 
+\todo{standard RSD analysis using powerspectrum multipoles, Oka 2014, Beuter 2017}, 
+\todo{similar RSD analysis using powerspectrum wedges instead of multipoles, Sanchez 2017,Grieb 2017}, 
+\todo{tests of GR from fsigma8 Alam 2015}
+\todo{Beuter2016 constraints on mneut}.
 
-\begin{enumerate}
-{\item 
-limits of the current framework
-}
-{\item 
-mention bispectrum
-}
-{\item 
-mention chapters and how they improve things
-}
-\end{enumerate}
+\todo{briefly mention future surveys and how we're no longer statistics dominated but rather  
+systematic dominated. just the usual postdoc application stuff for motivating my phd. 
+higher order statistics, systematics, innovative methods for inference}
+
+\todo{bispectrum}
+
+\todo{systematics}
+
+\todo{abc}
+
+\todo{galaxy-halo connection: 
+start by talking about the galaxy-halo model now. Talk about the evidence 
+that this simpe model is failing. Then talk about how deviations from this 
+model (e.g. assembly bias) impacts the accuracy of mock catalogs and also 
+the cosmological constraints we derive. Then talk about how this is important 
+for galaxy evolution, which is interesting on its own. Talk about the role 
+of galaxy enviornment in their evolution. }
+
+\todo{some summarizing remarks}
 
 \chapname s~\chapalt{fc} and~\chapalt{galenv} have both been refereed and
 published in the astronomical literature.

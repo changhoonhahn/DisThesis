@@ -310,18 +310,79 @@ Beyond providing a way to infer the growth rate of structure, which
 can be used to test GR and modified gravity scenarios, galaxy clustering
 also provides a unique window to probe fundamental physics beyond the 
 standard model. 
+In the derivations of Sections~\ref{sec:lss} and~\ref{sec:rsd} we focused 
+on how the density fluctuations of dark matter evolves. Because dark matter 
+consistutes majority of the matter in the Universe, this is an excellent 
+approximation. However, it negelects some of the more detailed imprints on 
+large-scale structure from other matter components-- \emph{i.e.} neutrinos. 
+Oscillation and detection experiments have (\emph{very} Nobel Prize in Physics 2015) 
+convincingly confirmed {\em not} massless (\todo{Beringer et al. 2012,Lesgourges, 2012, 2013})
 
-In the derivations of earlier this chapter, we focused on how the matter
-density fluctuations of dark matter evolves. 
-\todo{a few paragraphs about the impact of neutrinos of galaxy clustering. how neutrinos suppress the growth of structure below their free-streaming scale and leave imprints on the LSS. From the imprints on galaxy clustering, we can place limits on \mneut. }
+In the very early Universe, neutrinos are relativistic and coupled to the 
+primordial plamsa. Later they decouple from the plasma, while they are still 
+ultra-relativistic and redshift. While they are relativistic, they do not 
+contribute to the energy density of matter but instead radiation. Then during 
+matter domination, neutrinos eventually become non-relativistic. At this point, 
+neutrinos contribute to the matter energy density and act as ``warm/hot'' 
+dark matter.
+
+Neutrinos after they decouple from the primoridal plasma constitutes a 
+collisionless fluid, where the individual particles free-stream with 
+characteristic velocities defined by their thermal velocity. While 
+neutrinos are relativistic, their free-streaming scale is simply 
+equal to the Hubble radius. But when they become non-relativistic, 
+their can be expressed as
+\beq
+v_{\rm th} \approx 158 (1 + z) \left(\frac{1 {\rm eV}}{m} \right) \; \; {\rm km \; s^{-1}}
+\eeq
+and the free-streaming scale can be derived in an analogous way as
+Jean's length
+\beq
+\lambda_{\rm FS} = 2 \pi \sqrt{\frac{2}{3}} \left( \frac{v_{\rm th}}{H} \right)
+\eeq
+or 
+\beq \label{eq:kfs}
+k_{\rm FS} = \frac{2\pi a}{\lambda_{\rm FS}} \approx  0.82 \frac{\sqrt{\Omega_\Lambda + \Omega_m(1+z)^3}}{(1+z)^2} \left(\frac{m_\nu}{1\;{\rm eV}} \right).
+\eeq
+$\Omega_\Lambda$ and $\Omega_m$ are the current cosmological constant and matter 
+density fractions, respectively.
+
+Neutrinos leave two main imprints on LSS. In the early Universe they contribute
+to the radiation energy density. After they become non-relativistic in matter
+domiation, they contribute to the matter energy density. As described in 
+Section~\ref{sec:lss}, matter-radiation equality marks the turning point in 
+suppression of growth of structure, quantified by $T(k)$. The transition of 
+neutrinos from radiation to matter impacts $a_{eq}$ and thus shifts the turning 
+point of the cold dark matter (CDM) only powerspectrum. 
+Even after becoming non-relativistic, neutrinos do not contribute to the
+clustering of matter on scale smaller than the free-streaming scale, 
+$k_{\rm FS}$ (Eq.~\ref{eq:kfs}). The impact of this scale dependent 
+suppression of clustering, can be analytically estimated for the powerspectrum: 
+\beq
+\frac{\Delta P}{P} = \frac{P^{f_\nu \neq 0} - P^{f_\nu = 0}}{P^{f_\nu = 0}} \approx - 8 f_\nu \;\;\;\; {\rm for}\;\; k \gg k_{\rm FS}.
+\eeq
+$f_\nu = \Omega_\nu / \Omega_m$.
+
+The total mass of neutrinos (\mneut) dictate the strength of these imprints. 
+The broadband shape of the powerspectrum offers a unique opportunity to measure
+the extent of these imprints and constrain \mneut. The same tools that we 
+use for analyzing RSDs and measuring the growth rate of structure can be used 
+to measure \mneut from observations of galaxy surveys.
+Based on their forecasts (DESI; \todo{cite}), the next galaxy surveys have the
+potential to infer the most stringent constraints 
+($\sigma_{\sum m_\nu} \sim 0.03\;{\rm eV}$) on \mneut. Such constraints would 
+trump those from particle physics experiments (\todo{Wolf}) and have the potential to distinguish
+between the normal or invereted neutrino mass hierarchy and reveal physics
+beyond the Standard Model.
 
 \section{Analyzing Galaxy Clustering}
 %Beyond the general description and derivation of the redshift-space galaxy powerspectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
 The ultimate goal of galaxy clustering analyses is to derive constraints on cosmological 
 parameters and models from observed measurements of galaxly clustering -- the probability 
-distribution of the cosmological parameters given observations. The standard approach
-to deriving this {\em posterior} probability distribution is using Bayesian parameter
-inference.  Based on Bayes theorem, the posterior is 
+distribution of the cosmological parameters (\emph{e.g.} $f$, \mneut) given observations. 
+The standard approach to deriving this {\em posterior} probability distribution is using 
+Bayesian parameter inference. Based on Bayes theorem, the posterior probability distribution 
+can be expressed as 
 \beq
 P({\bf \theta}| {\bf D}) = \frac{P({\bf D}|{\bf \theta}) P({\bf \theta})}{P({\bf D})}.
 \eeq
@@ -369,11 +430,26 @@ evaluated. In practice, instead of evaluating the posterior distribution at all 
 parameter space, the distribution is sampled using a sampler such as a Markov Chain Monte 
 Carlo (MCMC) sampler -- \emph{e.g.} $\mathtt{emcee}$ \citep[][]{emcee}.
 
-Using the elements of galaxy clustering analysis I describe in this chapter, the latest
-galaxy surveys have produced remarkable constraints on cosmological parameters. 
-\todo{standard RSD analysis using powerspectrum multipoles, Oka 2014, Beuter 2017}, 
-\todo{similar RSD analysis using powerspectrum wedges instead of multipoles, Sanchez 2017,Grieb 2017}, 
-\todo{tests of GR from fsigma8 Alam 2015}
+Using the elements of galaxy clustering analysis I describe throughout this chapter, 
+the latest galaxy surveys have produced remarkable constraints on cosmological parameters. 
+From observations of SDSS and BOSS, measurements of the powerspectrum multipoles 
+($\ell = 0, 2,\;{\rm and}\;4$) have yielded a number of constraints on $f\sigma_8$ 
+(\todo{cite Oka 2014, Beutler 2017}). Analogous configure-space analyses
+have derived similar $f \sigma_8$ constraints (\todo{Reid, Alam:2016}). $\sigma_8$ 
+is the amplitude of the powerspectrum on the scale of $8\;h^{-1}{\rm Mpc}$. 
+Similar to multipoles, powerspectrum wedges have also been used to derive $f\sigma_8$ 
+constraints in both Fourier and configuration-space (\todo{Sanchez2017, Grieb2017}). 
+\todo{also cite Samushia2015, Beutler2014, Chuang2014, Sanchez2013, Reid2014, More2015}
+
+These $f \sigma_8$ constraints can then be used to test $\Lambda$CDM cosmology and 
+General Relativity through comparisons with cosmological model predictsions from 
+CMD experiments such as WMAP (\todo{cite WMAP look at florian}) or {\em Planck} (\todo{cite planck collaboration}).
+The constraints from BOSS are generally consistent $\Lambda$CDM and GR over 
+$0.2 < z < 0.75$ (\todo{cite stuff}).  For reference, \todo{cite Beutler} derives 
+$f\sigma_8 = 0.482 \pm 0.053, 0.455 \pm 0.050$, and $0.410 \pm 0.042$ for effective redshift 
+$z_{\rm eff} = 0.38, 0.51$, and $0.61$ from BOSS. 
+
+Furthermore, 
 \todo{Beuter2016 constraints on mneut}.
 
 \todo{briefly mention future surveys and how we're no longer statistics dominated but rather  

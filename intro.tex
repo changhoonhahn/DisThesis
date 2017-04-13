@@ -45,8 +45,7 @@ galaxies and their host dark matter environments pose some of the most impactful
 questions that I seek to answer in my dissertation. 
 
 
-%\section{$\Lambda$CDM cosmology}
-\section{Large Scale Structure} \label{sec:lss}
+\section{Large Scale Structure in $\Lambda$CDM} \label{sec:lss}
 From the early Universe, primordial quantum fluctuations grow into the 
 large-scale structures of the Universe we observe today through gravitational 
 instability over the different epochs of cosmic history. In this section, I briefly 
@@ -400,7 +399,7 @@ P({\bf \theta}| {\bf D}) &\propto& P({\bf D}|{\bf \theta}) P({\bf \theta}) \\
 In the context of galaxy clustering analyses and LSS cosmology in general, the likelihood 
 function is {\em typically} assumed to have Gaussian function form and calculated as 
 \beq \label{eq:likelihood}
-P({\bf D}|{\bf \theta}) = \mathcal{L} = \frac{1}{(2\pi)^{N_d/2} {\rm det}{\bf C}^{1/2}}\; {\rm exp}\left[ -\frac{1}{2} ({\bf D} - F({\bf \theta}))^T {\bf C}^{-1} ({\bf D} - F({\bf \theta}))\right].
+P({\bf D}|{\bf \theta}) = \mathcal{L} = \frac{1}{(2\pi)^{N_d/2}\; {\rm det}{\bf C}^{1/2}}\; {\rm exp}\left[ -\frac{1}{2} ({\bf D} - F({\bf \theta}))^T {\bf C}^{-1} ({\bf D} - F({\bf \theta}))\right].
 \eeq
 ${\bf D}$ is data from observations with dimension $N_d$. $F({\bf \theta})$ is the model prediction 
 of the observable generated from cosmological parameters ${\bf \theta}$. And ${\bf C}$ is 
@@ -496,10 +495,52 @@ collecting a significant fraction redshifts due to physical constraints
 on the focal plane. Their impact on $P(k)$ is well beyond their angular scale 
 and restricts analysis on small scales, which has higher signal-to-noise. 
 In addition to discarding the statistical gains of these surveys, fiber 
-collisions can also bias the constraints on cosmological parameters.
+collisions can also bias the constraints on cosmological parameters. 
+Fortunately, challenges from observational systematics are often {\em solvable}
+\citep[][and \chap{fc}]{Ross:2012aa, Guo:2012aa}.
 
+The likelihood of Eq.~\ref{eq:likelihood}, assumes a Gaussian functional form
+-- a standard assumption in LSS analyses. This assumption for LSS with galaxies, 
+in detail, cannot be correct due to nonlinear gravitational evolution and 
+biasing~\citep{Bernardeau:2002aa}. Furthermore, to capture the sample variance of the data
+the likelihood relies on the covariance matrix estimate, which currently 
+faces a number of shortcomings. Besides the labor and computational costs 
+of the required simulated mock catalogs, mock catalogs are inaccurate on small scales~(see 
+\citealt{cosmiccode,nifty} and references therein). Furthermore, using covariance 
+matrix estimates rather than the ``true'' covariance matrix \citep{Sellentin:2016a}
+along with systematics impact the likelihood in ways difficult to model. 
+Evaluating the explicit likelihood, however, is not necessary for inferring
+cosmological parameters. Likelihood-free inferences such as Approximate 
+Bayesian Computation (ABC) relax these restrictions and make inference 
+possible without making any assumptions on the likelihood (\chap{abc}).
 
-\todo{abc}
+As described earlier in this Chapter, galaxies are biased tracers of the 
+underlying matter distribution. For more than a decade, halo occupation 
+modeling has been the main framework for connecting galaxies
+to the dark matter structures underneath in galaxy formation and cosmology
+studies (\todo{Yang et al. 2003; Tinker et al. 2005; Zehavi et al. 2005; Porciani  Norberg
+2006; van den Bosch et al. 2007; Zheng et al. 2007; Conroy
+ Wechsler 2009; Yang et al. 2009; Zehavi et al. 2011;
+Guo et al. 2011; Wake et al. 2011; Yang et al. 2011, 2012;
+Leauthaud et al. 2012; Rodr´ıguez-Puebla et al. 2012; Tinker
+et al. 2013; Cacciato et al. 2013; More et al. 2013;
+Guo et al. 2014; Zu Mandelbaum 2015}). The standard halo occupation model
+assumes that galaxies reside in dark mater halos and their occupation 
+is function of the mass of the halo. However, the clustering of dark 
+matter halos, which themselves are tracers of the density field, 
+depend on properties beyond their masses. If this effect, coined 
+{\em halo assembly bias}, propagates to galaxies, it will induce 
+{\em galaxy} assembly bias on standard halo occupaiton model and 
+significantly impact galaxy clustering analyses (\todo{Zentner:2014}). 
+
+Beyond their utility as tracers for cosmological analyses, galaxies 
+also pose fundamental questions regarding how the early homogenous 
+Universe became the heterogenous one today. Observations have now 
+firmly established a global view of galaxy properties out to $z\sim1$ 
+\citep[\emph{e.g.}][\chap{galenv}]{Blanton:2009aa, Moustakas:2013aa}.
+These observations can be positioned in the hierarchical structure 
+formation framework in order to constrain key elements of galaxy evolution 
+\citep[][\chap{galhalo}]{Wetzel:2013aa}. 
 
 \todo{galaxy-halo connection: 
 start by talking about the galaxy-halo model now. Talk about the evidence 

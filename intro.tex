@@ -22,7 +22,7 @@ Baryon Oscillation Spectroscopic Survey (BOSS\todo{cite}) have
 exploited these galactic beacons to map out the cosmic structure
 of the Universe. Precise measurements of distance and growth 
 of large-scale structure (LSS) from these surveys, provide tests 
-of cosmological models that desribe the content, geometry and history 
+of cosmological models that describe the content, geometry and history 
 of the Universe. \todo{By analyzing measurements of LSS,}
 
 
@@ -48,8 +48,8 @@ questions that I seek to answer in my dissertation.
 %\section{$\Lambda$CDM cosmology}
 \section{Large Scale Structure} \label{sec:lss}
 From the early Universe, primordial quantum fluctuations grow into the 
-large-scale structures of the Universe we observe today through the different
-epochs of cosmic history and by gravitational instability. In this section, I briefly 
+large-scale structures of the Universe we observe today through gravitational 
+instability over the different epochs of cosmic history. In this section, I briefly 
 describe the simplified ({\em linear}) theory of this evolution and explain core 
 concepts of LSS cosmology using galaxies. Lets begin by defining the matter 
 overdensity field (or density fluctuation) at comoving position ${\bf r}$: 
@@ -149,12 +149,12 @@ In practice, this scale dependent evolution of the density fluctuation is
 quantified through the ``transfer function'' $T(k)$ (\todo{cite all the transfer function papers}). After inflation the 
 powerspectrum of the density fluctation can be summarized by: 
 \beq
-P_{inf}(k) \propto k^{n_s}
+P_{\rm inf}(k) \propto k^{n_s}
 \eeq
 where $n_s \sim 1$ \todo{cite inflation papers: Harrison (1970), Zel’dovich (1972) and Peebles Yu (1970) Komatsu et al. 2011}. Then powerspectrum of the density 
 fluctuation in the late Universe can be expressed as 
 \beq
-P(k) \propto k^{n_s} T^2(k) D^2(k). 
+P(k) \propto k^{n_s} \; T^2(k) \; D^2(k). 
 \eeq
 $D(k) \equiv D^(+)$ from earlier this section. 
 
@@ -299,7 +299,7 @@ P_g^0 (k) = (b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2) P(k) \\
 P_g^2 (k) = (\frac{4}{3} f b_1 + \frac{4}{7} f^2) P(k). 
 \eeqa
 Their ratio 
-\beq
+\beq \label{eq:multipole_ratio}
 \frac{P_g^2}{P_g^0} = \frac{\frac{4}{3} f b_1 + \frac{4}{7} f^2}{b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2},
 \eeq
 illustrates how the distortions caused by RSDs allow us to extract information of 
@@ -430,8 +430,8 @@ evaluated. In practice, instead of evaluating the posterior distribution at all 
 parameter space, the distribution is sampled using a sampler such as a Markov Chain Monte 
 Carlo (MCMC) sampler -- \emph{e.g.} $\mathtt{emcee}$ \citep[][]{emcee}.
 
-Using the elements of galaxy clustering analysis I describe throughout this chapter, 
-the latest galaxy surveys have produced remarkable constraints on cosmological parameters. 
+From the galaxy clustering analysis I generally describe in this chapter, the latest 
+galaxy surveys have produced remarkable constraints on cosmological parameters. 
 From observations of SDSS and BOSS, measurements of the powerspectrum multipoles 
 ($\ell = 0, 2,\;{\rm and}\;4$) have yielded a number of constraints on $f\sigma_8$ 
 (\todo{cite Oka 2014, Beutler 2017}). Analogous configure-space analyses
@@ -441,22 +441,50 @@ Similar to multipoles, powerspectrum wedges have also been used to derive $f\sig
 constraints in both Fourier and configuration-space (\todo{Sanchez2017, Grieb2017}). 
 \todo{also cite Samushia2015, Beutler2014, Chuang2014, Sanchez2013, Reid2014, More2015}
 
-These $f \sigma_8$ constraints can then be used to test $\Lambda$CDM cosmology and 
+The $f \sigma_8$ constraints can then be used to test $\Lambda$CDM cosmology and 
 General Relativity through comparisons with cosmological model predictsions from 
-CMD experiments such as WMAP (\todo{cite WMAP look at florian}) or {\em Planck} (\todo{cite planck collaboration}).
+Cosmic Microwave Background (CMB) experiments such as WMAP (\todo{cite WMAP look at florian}) or {\em Planck} (\todo{cite planck collaboration}).
 The constraints from BOSS are generally consistent $\Lambda$CDM and GR over 
 $0.2 < z < 0.75$ (\todo{cite stuff}).  For reference, \todo{cite Beutler} derives 
 $f\sigma_8 = 0.482 \pm 0.053, 0.455 \pm 0.050$, and $0.410 \pm 0.042$ for effective redshift 
-$z_{\rm eff} = 0.38, 0.51$, and $0.61$ from BOSS. 
+$z_{\rm eff} = 0.38, 0.51$, and $0.61$ from BOSS. $f \sigma_8$ constraints from 
+galaxy powerpsectrum multipole analyses have also been combined with CMB data to 
+constrain \mneut (\todo{Beuter:2014 and Gil-Marin:2015}).
 
-Furthermore, 
-\todo{Beuter2016 constraints on mneut}.
+%Cosmological measurements such as galaxy clustering statistics are no longer dominated by uncertainties from statistical precision, but from systematic effects of the measurements. This is a result of the millions of redshifts to distant galaxies that have been obtained through redshift surveys such as the 2dF Galaxy Redshift Survey (2dFGRS; \citealt{Colless:1999aa}) and the Sloan Digital Sky Survey III Baryon Oscillation Spectroscopic Survey 
+Ongoing and future surveys, such as the Extended Baryon Oscillation Spectroscopic 
+Survey (eBOSS; \todo{Dawson:2015aa}), the Dark Energy Survey Instrument 
+(DESI; \todo{Schlegel:2011aa, Morales:2012aa, Makarem:2014aa}), 
+and the Subaru Prime Focus Spectrograph (PFS; \todo{Takada:2014aa}), will 
+continue to collect many more million redshifts and expand the probed cosmic 
+volume by an order of magnitude. These observations have the potential to 
+produce cosmologicl parameter constraints with unprecedented statistical 
+precision. The main challenges now for realizing the full potential of 
+these observations are methodological.
 
-\todo{briefly mention future surveys and how we're no longer statistics dominated but rather  
-systematic dominated. just the usual postdoc application stuff for motivating my phd. 
-higher order statistics, systematics, innovative methods for inference}
+%\todo{briefly mention future surveys and how we're no longer statistics dominated but rather  systematic dominated. just the usual postdoc application stuff for motivating my phd.  higher order statistics, systematics, innovative methods for inference}
 
-\todo{bispectrum}
+In this chapter, I mainly focus on LSS analyses using only the two-point
+statistic -- \emph{i.e.} the galaxy powerspectrum. Analyses restricted
+to just the two-point statistic, however, face a number of limitations. 
+The constraints on the growth rate of structure, I quote above, have all 
+been constraints on $f \sigma_8$ rather than $f$ alone. The degeneracy 
+between $f$ and $\sigma_8$, the amplitude of $P(k)$, cannot be broken 
+with $P(k)$ alone. Furthermore, the $P(k)$ multipoles in 
+Eq.~\ref{eq:multipole_ratio} demonstrate that $P(k)$ analyses also 
+suffer from the degeneracy between $f$ and bias parameters. 
+
+The {\em bispectrum} $B({\bf k})$, three-point statistic of density
+fluctuations, can be used to break the degeneracies between $f$, 
+$\sigma_8$, and bias parameters.
+\todo{Scoccimarro et al. 1998a; Verde et al. 1998; Scoccimarro 2000 see Bernardeau for a review}.
+The dependence on triangle configuration in $B(⃗{\bf k})$ 
+disentangles contributions from gravitational instability versus 
+non-linear biasing of galaxies. Without going into any further detail, 
+in Figure\todo{figure} I present the $B({\bf k})$ measurement for 
+the BOSS Data Release 12 CMASS (this is not an acronym) galaxy sample 
+(left) and a perturbation theory model (right). $P(k)$ and $B({\bf k})$ 
+can be jointly analyzed in order to derive constraints explicitly on $f$. 
 
 \todo{systematics}
 

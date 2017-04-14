@@ -3,242 +3,259 @@ Amidst the countless stars and galaxies we observe in the Universe lie
 undetected structures of dark matter, orders of magnitude larger than 
 the luminous objects they engulf. These vast invisible structures began 
 in the very early Universe, as quantum fluctuations in the aftermath of 
-the Big Bang. 
-%These vast invisible structures began as quantum fluctuations in the beginning of the Universe in the aftermath of the Big Bang. 
-During the subsequent period of inflation (\todo{cite?}), these primordial fluctations 
+the Big Bang. During the subsequent period of inflation, these primordial fluctations 
 were amplified by the accelerated expansion of the Universe and then 
 propagated through gravitational instability for billions of years. 
 
 Despite constituting most of the matter in the Universe, dark matter 
 has yet to be directly observed. In fact, it can only be studied through 
-its gravitational interactions with luminous baryons — the matter that 
-constitutes stars, galaxies, and celestial objects that emit light. 
+its gravitational interactions with luminous baryons, the matter of
+stars, galaxies, and celestial objects that emit light. 
 In a way, the galaxies we observe in the cosmic volumes probed by our 
 telescopes act as illuminated beacons tracing the vast dark matter 
 terrains of the Universe.
 
 Over the past decade, spectroscopic redshift surveys like the 
-Baryon Oscillation Spectroscopic Survey (BOSS\todo{cite}) have 
-exploited these galactic beacons to map out the cosmic structure
+Sloan Digital Sky Survey III Baryon Oscillation Spectroscopic Survey 
+(BOSS; \citealt{Anderson:2012aa, Dawson:2013aa}) have 
+exploited these galactic beacons to map out cosmic structures
 of the Universe. Precise measurements of distance and growth 
 of large-scale structure (LSS) from these surveys, provide tests 
 of cosmological models that describe the content, geometry and history 
-of the Universe. \todo{By analyzing measurements of LSS,}
+of the Universe. 
+The next leap in galaxy surveys will continue to expand the cosmic 
+volumes probed by galaxies. These observations have the potential 
+to constrain cosmological parameters with unprecedented precision. 
+In the following secitons, I briefly introduce how observations from galaxy
+redshift surveys can be used to test cosmological models, 
+General Relativity, and particle physics beyond the Standard Model.
 
 
-Through these galaxies, we can explore the properties of the underlying dark matter
-and the growth of their structure. Measurements that quantify these properties allow us to make
-precise calculations of cosmological parameters, which quantify the content, geometry, and
-expansion history of the Universe. Ultimately the constraints we measure on these parameters,
-enlighten us on the properties of dark energy, which remains one of the most crucial unsolved
-questions in cosmology. Certainly these precise cosmological measurements require a profound
-understanding of the formation and evolution of galaxies. Unfortunately there is no clear
-narrative of galaxy formation and evolution due to the complex, non-linear, and stochastic nature
-of the physical processes that govern them.
+%In this disseration, I address major methodological challenges in 
+%analyzing LSS with galaxies 
 
-In fact, galaxy formation and evolution remain another central unsolved questions in
-astrophysics and cosmology. However, since galaxies are enveloped in the massive gravitational
-wells of their host dark matter structures, the underlying dark matter of galaxies undoubtedly
-plays a crucial role in their formation and evolution. Therefore, with its implications on the most
-crucial questions in both cosmology and our understanding of galaxies, the interactions between
-galaxies and their host dark matter environments pose some of the most impactful questions,
-questions that I seek to answer in my dissertation. 
+%Through these galaxies, we can explore the properties of the underlying dark matter
+%and the growth of their structure. Measurements that quantify these properties allow us to make
+%precise calculations of cosmological parameters, which quantify the content, geometry, and
+%expansion history of the Universe. Ultimately the constraints we measure on these parameters,
+%enlighten us on the properties of dark energy, which remains one of the most crucial unsolved
+%questions in cosmology. Certainly these precise cosmological measurements require a profound
+%understanding of the formation and evolution of galaxies. Unfortunately there is no clear
+%narrative of galaxy formation and evolution due to the complex, non-linear, and stochastic nature
+%of the physical processes that govern them.
+
+%In fact, galaxy formation and evolution remain another central unsolved questions in
+%astrophysics and cosmology. However, since galaxies are enveloped in the massive gravitational
+%wells of their host dark matter structures, the underlying dark matter of galaxies undoubtedly
+%plays a crucial role in their formation and evolution. Therefore, with its implications on the most
+%crucial questions in both cosmology and our understanding of galaxies, the interactions between
+%galaxies and their host dark matter environments pose some of the most impactful questions,
+%questions that I seek to answer in my dissertation. 
 
 
 \section{Large Scale Structure in $\Lambda$CDM} \label{sec:lss}
 From the early Universe, primordial quantum fluctuations grow into the 
 large-scale structures of the Universe we observe today through gravitational 
-instability over the different epochs of cosmic history. In this section, I briefly 
+instability over different epochs of cosmic history. In this section, I briefly 
 describe the simplified ({\em linear}) theory of this evolution and explain core 
 concepts of LSS cosmology using galaxies. Lets begin by defining the matter 
-overdensity field (or density fluctuation) at comoving position ${\bf r}$: 
+overdensity field (or density fluctuation) at comoving position $\bm{r}$: 
 \beq \label{eq:delta}
-\delta({\bf r}) = \frac{\rho({\bf r}) - \bar{\rho}}{\bar{\rho}}, 
+\delta(\bm{r}) = \frac{\rho(\bm{r}) - \bar{\rho}}{\bar{\rho}}, 
 \eeq
-where $\rho({\bf r})$ and $\bar{\rho}$ are the density field and mean 
-density respectively. In Fourier space ($k$-space), Eq.~\ref{eq:delta} can 
-be Fourier transformed, 
+where $\rho(\bm{r})$ is the density field and $\bar{\rho}$ is the mean 
+density. Then, in Fourier space the density fluctuation becomes 
 \beq
-\delta({\bf k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3} e^{-i{\bf k}\dot{\bf r}}\;\delta({\bf r}).
+\delta(\bm{k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3}\; e^{-i\bm{k}\cdot\bm{r}}\;\delta(\bm{r}),
 \eeq
-For describing the evolution of the overdensity field, Fourier space is generally 
-favored over configuration space because, as derived later in the section,
-the Fourier modes of $\delta$ evolve independently in linear theory -- 
-\emph{i.e.} on large scales.
-
+the Fourier transform of $\delta(\bm{r})$. 
+For describing the evolution of the overdensity field, Fourier space is often 
+favored because, as derived later in the section, the Fourier modes of 
+$\delta$ evolve independently on large scales -- \emph{i.e.} in linear theory.
 The information in the overdensity field is often quantified using its 
-$N$-point statistics (\todo{cite Peebles bernardeua}). In fact, the two-point
-statistic is one of commonly used tool in large scale structure studies.
-This two-point statistic (also referred to as the correlation function) is
-defined as, 
+$N$-point statistics \citep{peebles80, Bernardeau:2002aa, DodelsonBook}. 
+In fact, the two-point statistic is one of the most commonly used tool in 
+large scale structure studies. This two-point statistic, which is also 
+referred to as the correlation function, is defined as 
 \beq
-\xi(r) = <\delta({\bf x})\delta({\bf x} +  {\bf r})>
+\xi(\bm{r}) = <\delta(\bm{x})\delta(\bm{x} +  \bm{r})>
 \eeq
-and in Fourier space as,
+and in Fourier space as
 \beq
-<\delta({\bf k})\delta({\bf k'})> = (2\pi)^3 P(k) \delta^{D}({\bf k}+{\bf k'}).
+<\delta(\bm{k})\delta(\bm{k'})> = (2\pi)^3 P(\bm{k})\;\delta^{D}(\bm{k}+\bm{k'}).
 \eeq
-$\delta^{D}$ is the Dirac delta function and $P(k)$ is the {\em powerspectrum}, 
-the Fourier transform of $\xi$. In principle, $\xi$ and $P(k)$ contain the same 
-information. In practice, however, analyzing $\xi$ versus $P(k)$ carry different 
-caveats (\todo{cite FKP}). Throughout this section, and also the dissertation, 
-I will mainly focus on the powerspectrum. 
+$\delta^{D}$ is the Dirac delta function and $P(\bm{k})$ is the two-point statistic in 
+Fourier space -- the {\em powerspectrum}. $P(\bm{k})$ is the Fourier transform of 
+$\xi(\bm{r})$ and, in principle, they contain the same information. 
+In practice, however, analyzing $\xi(\bm{r})$ and $P(\bm{k})$ carry different 
+caveats~\citep{Feldman:1994aa}. Throughout this dissertation, I will mainly focus 
+on the powerspectrum. 
 
-The evolution of the dark matter overdensity field can be derived (on 
-sub-horizon scales) as follows. For pressureless dark matter, the equation of motion
-can be derived from the continuity, Euler, and Poisson equations
+Now in order to determine the evolution of the matter overdensity field
+(on sub-horizon scales) consider pressureless dark matter, which consistutes 
+most of the matter in the Universe. From the continuity, Euler, and Poisson equations
 \beqa 
-\frac{\partial \rho}{\partial t} + \nabla \dot \rho {\bf u} = 0  \\ 
-\frac{\partial {\bf u}}{\partial t} + ({\bf u} \dot \nabla) \dot {\bf u} - \nabla\Phi = 0 \\ 
+\frac{\partial \rho}{\partial t} + \nabla \dot \rho \bm{u} = 0  \\ 
+\frac{\partial \bm{u}}{\partial t} + (\bm{u} \dot \nabla) \dot \bm{u} - \nabla\Phi = 0 \\ 
 \nabla^2\Phi - 4 \pi G \rho = 0 
 \eeqa
-to 
+its equation of motion can be derived
 \beq \label{eq:meszaros}
-\frac{\partial^2 \delta}{\partial t^2} + 2 \frac{\dot{a}}{a} \frac{\partial \delta}{\partial t} - 4 \pi G \bar{\rho} \delta = 0.
+\frac{\partial^2 \delta}{\partial t^2} + 2 \frac{\dot{a}}{a} \frac{\partial \delta}{\partial t} - 4 \pi G \bar{\rho}\;\delta = 0.
 \eeq
-${\bf u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
-is the scale factor. For a detailed derivation I refer readers to \todo{cite Peebles 
-or Dodelson}. Eq.~\ref{eq:meszaros} a second order differential equation, therefore,
-the solution can be written as 
+$\bm{u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
+is the scale factor. For a detailed derivation I refer readers to 
+\cite{peebles80, DodelsonBook}. This equation, a second order differential 
+equation. Therefore, the solution can be written as 
 \beq 
-\delta({\bf r}, t) = D^{(+)}(t) A({\bf r}) + D^{(-)}(t) B({\bf r}).
+\delta(\bm{r}, t) = D^{(+)}(t) A(\bm{r}) + D^{(-)}(t) B(\bm{r}).
 \eeq
 The density flucation has two components: a growing mode $D^{(+)}$ and a decaying 
-mode $D^{(-)}$. The decaying mode decreases with time and its contribution becomes negligible
-leaving only the growing mode in the late Universe. Now in order to quantify
-the evolution of the growing mode $D^{(+)}$, one commonly used quantity is the 
-``growth rate of structure'': 
+mode $D^{(-)}$. The decaying mode, as its name suggests, decreases with time 
+and its contribution becomes negligible in the late Universe leaving only the 
+growing mode. To quantify the evolution of the growing mode $D^{(+)}$, one 
+commonly used quantity is the ``growth rate of structure'': 
 \beq \label{eq:f_growth}
-f = \frac{ d {\rm ln}\;D^{(+)}}{d {\rm ln}\;a}. 
+f = \frac{ d\; {\rm ln}\;D^{(+)}}{d\; {\rm ln}\;a}. 
 \eeq
 This growth rate of structure is a key quantity in LSS cosmology for testing different 
-cosmological models and theories of gravity. $f$ will be discussed further in Section~\ref{sec:rsd}.
+cosmological models and theories of gravity. $f$ will be discussed further in 
+Section~\ref{sec:rsd}.
 
-From the early Universe the density fluctuations evolve through different epochs in 
-cosmic history: inflation, radiation-dominated, and matter-dominated eras. Each of 
-these periods leave an imprint on the evolution of $\delta$. Fig.~\ref{fig:lifo}, 
-marks the different eras in the early Universe and plots how the physical scale of 
-the Universe, represented by the Hubble radius, evolves with $a$. 
+In addition to the their gravitation evolution, the density fluctuations 
+evolve through different epochs in cosmic history: inflation, 
+radiation-dominated era, matter-radiation equality, and matter-dominated era. Each of 
+these periods leave an imprint on the evolution of $\delta$. In Fig.~\ref{fig:lifo}, 
+I mark the eras in the early Universe and plot how the physical scale of 
+the Universe, represented by the Hubble radius, evolves with the scale factor $a$. 
 
 During inflation, the Hubble radius remains constant. Afterwards the Universe 
 becomes radiation dominated. Based on the Friedmann equations the Hubble radius 
-during the radiation dominated era is approximately $\propto a^{2}$. The Universe then 
-becomes matter dominated and the Hubble radius is approximately $\propto a^{3/2}$. 
-Meanwhile, the physical scale of perturbations is 
-$\lambda_{phys} = \lambda_{comov}\ a(t) \propto a(t)$. As Fig.~\ref{fig:lifo} 
-illustrates, perturbations exit the Hubble radius during inflation then 
-reenter the Hubble radius later on. Depending on the physical scale of the 
-perturbation, it can enter either during the radiation dominated  
-(smaller scale) or matter dominated (larger scale) era. 
-
+during the radiation dominated era is approximately $\propto a^{2}$. After a period 
+where radiation and matter have the same energy density, the Universe 
+becomes matter dominated where the Hubble radius is approximately $\propto a^{3/2}$. 
+Meanwhile, the physical scale of perturbations is $\lambda_{phys} = \lambda_{comov}\ a(t)$ 
+and thus $\propto a(t)$. As Fig.~\ref{fig:lifo} schematically illustrates, 
+perturbations exit the Hubble radius during inflation then 
+reenter the Hubble radius later on. 
+\todo{SENTENCE ON HOW PERTURBATIONS ARE FROZEN OUTSIDE THE HORIZON}
+Depending on the physical scale of the perturbation, it enters either
+during the radiation-dominated era (smaller scale) or matter-dominated era (larger scale). 
 
 The physical scale of perturbations that enter the horizon at the time of 
-matter-radiation equality ($a(t) = a_{eq}$), $\lambda_{eq}$ is $\sim 500 h^{-1}Mpc$.
-The perturbations that enter before the matter-radiation equality during 
+matter-radiation equality, where $a(t) = a_{eq}$, is $\lambda_{eq} \sim 500\;h^{-1}{\rm Mpc}$.
+Then perturbations that enter before the matter-radiation equality, during 
 the radiation dominated era, have physical scales $\lambda_{phys} < \lambda_{eq}$. 
-These smaller scale perturbations, todo{explain the supression} 
-On the other side, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
+These smaller scale perturbations, \todo{EXPLAIN THE SUPRESSION} 
+On the other hand, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
 enter after matter-radiation equality during the matter dominated epoch. These 
 perturbations do {\em not} experience the suppression of growth of the radiation 
-dominated era. Therefore, as the overdensity field goes through these epochs, its 
-growth on small scale is suppressed by a factor of $\sim k^4$.  
+dominated era. The net effect on the overdensity as it goes through these epochs 
+is the suppression of growth on scales smaller than $\lambda_{eq}$, or $k_{eq}$ in 
+Fourier space, by a factor of $\sim k^4$. In practice, this scale dependent 
+evolution of the density fluctuation is quantified through the 
+``transfer function'' $T(k)$~\citep{Eisenstein:1998aa, Eisenstein:1999aa}. 
 
-
-In practice, this scale dependent evolution of the density fluctuation is 
-quantified through the ``transfer function'' $T(k)$ (\todo{cite all the transfer function papers}). After inflation the 
-powerspectrum of the density fluctation can be summarized by: 
+The density fluctuations after inflation can be summarized by the powerspectrum: 
 \beq
 P_{\rm inf}(k) \propto k^{n_s}
 \eeq
-where $n_s \sim 1$ \todo{cite inflation papers: Harrison (1970), Zel’dovich (1972) and Peebles Yu (1970) Komatsu et al. 2011}. Then powerspectrum of the density 
-fluctuation in the late Universe can be expressed as 
+where $n_s$, the spectral tilt of the primordial powerspectrum, is measured to be 
+$\sim 1$ \citep{Harrison:1970aa, Peebles:1970, Zeldovich:1972, Komatsu:2011aa}.
+Then, the powerspectrum of the density fluctuation in the late Universe can be 
+expressed as 
 \beq
-P(k) \propto k^{n_s} \; T^2(k) \; D^2(k). 
+P(k) \propto k^{n_s} \; T^2(k) \; D^2(k).
 \eeq
-$D(k) \equiv D^(+)$ from earlier this section. 
+where $D(k) \equiv D^{(+)}$ from earlier this section. 
 
 \begin{figure*}
 \begin{center}
 \includegraphics[width=\textwidth]{figs/lifo.png}
-\caption{Schematic diagram that illustrates the evolution of the Hubble radius
+\caption{\todo{Schematic diagram that illustrates the evolution of the Hubble radius
 (Above) The evolution of the Hubble radius (solid line) during inflation (flat), radiation
 domination, and matter domination (note inflection). Dashed, dotted, and dot-dashed
 lines show the physical length of three constant comoving scales. The scale corresponding
 to the current Hubble radius cH−1
 0 first “left the horizon” about 60 e-folds before the end
-of inflation (open circle).
+of inflation (open circle).}
 } \label{fig:lifo}
 \end{center}
 \end{figure*}
 
-\todo{paragraph about how because D and T depend on cosmological parameters 
-    so powerspectrum measurements of the matter density fluctuation can be 
-    used a tests of the cosmological models.
+\todo{PARAGRAPH ABOUT HOW BECAUSE D AND T DEPEND ON COSMOLOGICAL PARAMETERS 
+    SO POWERSPECTRUM MEASUREMENTS OF THE MATTER DENSITY FLUCTUATION CAN BE 
+    USED A TESTS OF THE COSMOLOGICAL MODELS.
 }
 So powerspectrum measurements of the matter density fluctuations can be compared
 to predictions of various cosmological models in order to produce constraints 
 on cosmological parameters, better understand dark energy, and test theories of 
-gravity. Unfortunately, most of the matter in the Universe is in the form of dark 
-matter and does not interact with radiation. 
+gravity. 
 
-Observers cannot measure the spatial statistics (or clustering) of dark matter 
-directly. Instead, we measure the clustering of galaxies and quasars, which trace
+As mentioned above, most of the matter in the Universe is in the form of dark 
+matter and does not interact with radiation. Observers cannot measure the 
+spatial statistics (or clustering) of dark matter directly. 
+Instead, we measure the clustering of galaxies or quasars, which trace
 the underlying matter distribution. The smoothed galaxy/quasar density field is 
 approximated by a local function of the matter density field
 \beq
-\delta_g({\bf r}) = F( \delta({\bf r} ). 
+\delta_g(\bm{r}) = f( \delta(\bm{r})). 
 \eeq
-This function can then be expanded Taylor series,
+$f(\delta(\bm{r})$ can then be expanded Taylor series~\citep{Fry:1993}:
 \beq
-\delta_g({\bf r}) = \sum\limits_{k=0}^{\infty} \frac{b_k}{k!} \delta^k. 
+\delta_g({\bf r}) = \sum\limits_{k=0}^{\infty} \frac{b_k}{k!} \delta^k 
 \eeq
-$b_1$ is referred to as the linear bias factor and $b_0$ is chosen so that
-$<\delta_g> = 0$. To linear order, 
+where $b_0$ is chosen so that $<\delta_g> = 0$ and $b_1$ is referred to as 
+the linear bias factor. Then to linear order, 
 \beq
 P_g(k) = b_1^2 P(k). 
 \eeq
-The primary subpopulation of galaxies used so far for LSS studies are luminous 
-red galaxies (\todo{Eistenstien apper}). These galaxies have $b_1 > 1$, which 
-means they are {\em biased} tracers of the matter distribution (\todo{cite Zehavi 2005, Sheldon 2009, Gastanage 2009}). 
-This bias is caused by the fact that luminous galaxies reside in larger potential 
-wells, which have stronger clustering properties than than less massive ones (\todo{manera 2010}). 
+The primary galaxy subpopulation used so far in LSS studies are luminous 
+red galaxies~\citep{Eisenstein:2001aa, Dawson:2013aa}. These galaxies have $b_1 > 1$,
+which makes them {\em biased} tracers of the matter 
+distribution~\citep{Zehavi:2005aa, Sheldon:2009aa,Gaztanaga:2009aa, Zhai:2016aa}.
+Luminous galaxies reside in larger potential wells. The peaks of the density fluctuation
+have stronger clustering properties than the overall overdensity field~\citep{Manera:2010aa}.
 
-Based on the simplified derivation of this section, once we have the spatial 
-distribution of galaxies or quasars we can derive the clustering of the matter
+Based on the derivation of this section, once we have the spatial 
+distribution of galaxies or quasars, we can derive the clustering of the matter
 distribution and then infer cosmological constraints. In practice, however, a
 number of factors complicate this procedure. One key complication is redshift-space
-distortions, which will be discussed in the following section.
+distortions, which will be discussed in the next section.
 
 \section{Redshift-Space Distortions} \label{sec:rsd}
-Spectroscopic redshifts surveys, such as 2dFGRS, SDSS, and BOSS, have mapped out
-millions of distant galaxies. Current surveys such as Extended Baryon Oscillation 
+Spectroscopic redshifts surveys, such as 2dF Galaxy Redshift Survey~\citep{Colless:1999aa}, 
+Sloan Digital Sky Survey, and BOSS, have mapped out millions of distant galaxies. 
+Current surveys such as Extended Baryon Oscillation 
 Spectroscopic Survey (eBOSS; \citealt{Dawson:2015aa}), and future surveys such as 
 the Dark Energy Survey Instrument (DESI; \citealt{Schlegel:2011aa, Morales:2012aa, Makarem:2014aa}) 
 and the Subaru Prime Focus Spectrograph (PFS; \citealt{Takada:2014aa}), will 
 continue to map out millions more. These surveys dominate LSS studies and have/will 
 been critical for inferring precise cosmological constraints. As their name suggest, 
-however, these {\em redshift} surveys do not directly measure the position of 
-galaxies, but rather the angular positions (right ascension and declination) and
-redshift of galaxies. 
+however, these {\em redshift} surveys do not directly measure the acutal position of 
+galaxies. Instead they measure the angular positions (right ascension and declination) 
+and redshifts of galaxies. 
 
-Redshifts from spectroscopic surveys observe the combination of recession 
-velocities due to the expansion of the Universe and the peculiar velocities of the galaxies 
+These redshifts are a combined measurement of the recession velocities due to 
+the expansion of the Universe and the peculiar velocities of the galaxies:
 \beq
 z_{obv} = z_{true} +  \frac{v_{pec}}{c}.
 \eeq 
-The comoving positions derived from the angular positions and redshifts are then
-in {\em redshift-space} and ``distorted'' compared to real-space comoving positions:
+The galaxy comoving positions derived from the angular positions and redshifts are then
+in {\em redshift-space} and ``distorted'' compared to real-space comoving positions by 
 \beq
-{\bf s} = {\bf x} +  \frac{{\bf v}_{pec} \cdot \hat{n}}{H_0}.
+{\bf s} = {\bf x} +  \frac{{\bf v}_{pec} \cdot \hat{n}}{H_0}
 \eeq 
-$\hat{n}$ is the unit vector along the line-of-sight. Thankfully, all hope is not 
-lost. The peculiar velocities of galaxies should be directly related to the total 
-matter distribution, since galaxies can be thought of as test particles in a 
-gravitational field. 
+where $\hat{n}$ is the unit vector along the line-of-sight. Thankfully, all hope is not 
+lost. 
 
-\todo{Kaiser 87} derives an approximation for the distortion caused by the coherent 
-infall of galaxies onto over dense regions in redshift space. This redshift-space 
-distortion (RSD), often referred to as the Kaiser effect, causes overdense regions
+The peculiar velocities of galaxies are directly related to the total 
+matter distribution, since galaxies can be thought of as test particles in a 
+gravitational field. Using this relation, \cite{Kaiser:1984aa} derives an 
+approximation for the distortion caused by the coherent infall of galaxies 
+onto overdense regions in redshift space. This redshift-space 
+distortion (RSD), often referred to as the Kaiser effect, causes observations of 
+overdense regions
 to appear squashed along the line of sight in redshift space. Galaxies around an
 overdense region closest to the observer (us) are moving towards the center of the 
 overdense region, so they appear in redshift-space to be farther away. Galaxies 
@@ -533,24 +550,33 @@ depend on properties beyond their masses. If this effect, coined
 {\em galaxy} assembly bias on standard halo occupaiton model and 
 significantly impact galaxy clustering analyses (\todo{Zentner:2014}). 
 
-Beyond their utility as tracers for cosmological analyses, galaxies 
-also pose fundamental questions regarding how the early homogenous 
-Universe became the heterogenous one today. Observations have now 
-firmly established a global view of galaxy properties out to $z\sim1$ 
-\citep[\emph{e.g.}][\chap{galenv}]{Blanton:2009aa, Moustakas:2013aa}.
-These observations can be positioned in the hierarchical structure 
-formation framework in order to constrain key elements of galaxy evolution 
+Beyond their utility as tracers, galaxies also pose fundamental 
+questions regarding how the early homogenous Universe became the heterogenous 
+one today. Observations have now firmly established a global view of galaxy 
+properties out to $z\sim1$ \citep[\emph{e.g.}][\chap{galenv}]{Blanton:2009aa, Moustakas:2013aa}.
+Galaxies roughly fall into two categories: star-forming galaxies and 
+quiescent ones with little star formation. The star-forming population 
+undergoes significant decline in star formation rate (SFR) over cosmic 
+time and significant fractions of them also rapidly ``quench'' their 
+star formation and become quiescent. The underlying drivers of this 
+evolution, however, are not directly revealed by observations.
+Cosmology, which precisely predicts the dark matter evolution, provides 
+a framework for answering {\em specific} and {\em tractable} questions 
+in galaxy evolution.  In $\Lambda$CDM, structures form 
+``hierarchically'' --- smaller ones form earlier and subsequently 
+merge to form larger ones. The galaxy population can be positioned in 
+this framework with halo occupation in order to constrain key elements 
+of their evolution and better understand the galaxy-halo connection 
 \citep[][\chap{galhalo}]{Wetzel:2013aa}. 
 
-\todo{galaxy-halo connection: 
-start by talking about the galaxy-halo model now. Talk about the evidence 
-that this simpe model is failing. Then talk about how deviations from this 
-model (e.g. assembly bias) impacts the accuracy of mock catalogs and also 
-the cosmological constraints we derive. Then talk about how this is important 
-for galaxy evolution, which is interesting on its own. Talk about the role 
-of galaxy enviornment in their evolution. }
-
-\todo{some summarizing remarks}
+In this dissertation, I tackle key methodological challenges in 
+galaxy clustering by developing methods to robustly treat systematics (\chap{fc}), 
+introducing innovative approaches to inference in LSS studies (\chap{abc}), and 
+improving our understanding of the galaxy-halo connection 
+(\chap{galenv} and \chap{galhalo}). Each Chapter contributes to unlocking 
+the full potential of current and future galaxy redshift surveys and will be
+critical for testing cosmological models and General Relativity and 
+constraining the total neutrino mass. 
 
 \chapname s~\chapalt{fc} and~\chapalt{galenv} have both been refereed and
 published in the astronomical literature.

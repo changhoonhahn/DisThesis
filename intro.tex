@@ -96,7 +96,7 @@ Now in order to determine the evolution of the matter overdensity field
 most of the matter in the Universe. From the continuity, Euler, and Poisson equations
 \beqa 
 \frac{\partial \rho}{\partial t} + \nabla \dot \rho \bm{u} = 0  \\ 
-\frac{\partial \bm{u}}{\partial t} + (\bm{u} \dot \nabla) \dot \bm{u} - \nabla\Phi = 0 \\ 
+\frac{\partial \bm{u} }{\partial t} + (\bm{u} \cdot \nabla) \cdot \bm{u} - \nabla\Phi = 0 \\ 
 \nabla^2\Phi - 4 \pi G \rho = 0 
 \eeqa
 its equation of motion can be derived
@@ -144,9 +144,10 @@ during the radiation-dominated era (smaller scale) or matter-dominated era (larg
 
 The physical scale of perturbations that enter the horizon at the time of 
 matter-radiation equality, where $a(t) = a_{eq}$, is $\lambda_{eq} \sim 500\;h^{-1}{\rm Mpc}$.
-Then perturbations that enter before the matter-radiation equality, during 
-the radiation dominated era, have physical scales $\lambda_{phys} < \lambda_{eq}$. 
-These smaller scale perturbations, \todo{EXPLAIN THE SUPRESSION} 
+Then perturbations that enter before the matter-radiation equality 
+have physical scales $\lambda_{phys} < \lambda_{eq}$ and since they enter
+during the radiation dominated era, these smaller scale perturbations 
+are effectively forzen and hence their growth is suppressed.
 On the other hand, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
 enter after matter-radiation equality during the matter dominated epoch. These 
 perturbations do {\em not} experience the suppression of growth of the radiation 
@@ -155,19 +156,6 @@ is the suppression of growth on scales smaller than $\lambda_{eq}$, or $k_{eq}$ 
 Fourier space, by a factor of $\sim k^4$. In practice, this scale dependent 
 evolution of the density fluctuation is quantified through the 
 ``transfer function'' $T(k)$~\citep{Eisenstein:1998aa, Eisenstein:1999aa}. 
-
-The density fluctuations after inflation can be summarized by the powerspectrum: 
-\beq
-P_{\rm inf}(k) \propto k^{n_s}
-\eeq
-where $n_s$, the spectral tilt of the primordial powerspectrum, is measured to be 
-$\sim 1$ \citep{Harrison:1970aa, Peebles:1970, Zeldovich:1972, Komatsu:2011aa}.
-Then, the powerspectrum of the density fluctuation in the late Universe can be 
-expressed as 
-\beq
-P(k) \propto k^{n_s} \; T^2(k) \; D^2(k).
-\eeq
-where $D(k) \equiv D^{(+)}$ from earlier this section. 
 
 \begin{figure*}
 \begin{center}
@@ -183,17 +171,27 @@ of inflation (open circle).}
 \end{center}
 \end{figure*}
 
-\todo{PARAGRAPH ABOUT HOW BECAUSE D AND T DEPEND ON COSMOLOGICAL PARAMETERS 
-    SO POWERSPECTRUM MEASUREMENTS OF THE MATTER DENSITY FLUCTUATION CAN BE 
-    USED A TESTS OF THE COSMOLOGICAL MODELS.
-}
-So powerspectrum measurements of the matter density fluctuations can be compared
-to predictions of various cosmological models in order to produce constraints 
+The density fluctuations after inflation can be summarized by the powerspectrum: 
+\beq
+P_{\rm inf}(k) \propto k^{n_s}
+\eeq
+where $n_s$, the spectral tilt of the primordial powerspectrum, is measured to be 
+$\sim 1$ \citep{Harrison:1970aa, Peebles:1970, Zeldovich:1972, Komatsu:2011aa}.
+Then, the powerspectrum of the density fluctuation in the late Universe can be 
+expressed as 
+\beq
+P(k) \propto k^{n_s} \; T^2(k) \; D^2(k).
+\eeq
+where $D(k) \equiv D^{(+)}$ from earlier this section. This means that, through 
+the cosmological models and parameters, which predict $T(k)$ and $D(k)$, we can 
+produce predictions of the powerspectrum of the density fluctuation. These
+predictions can then be compared to measurements made from observations in 
+order to produce constraints 
 on cosmological parameters, better understand dark energy, and test theories of 
 gravity. 
 
-As mentioned above, most of the matter in the Universe is in the form of dark 
-matter and does not interact with radiation. Observers cannot measure the 
+Unfortunately, most of the matter in the Universe is in the form of dark 
+matter and does not interact with radiation, so observers cannot measure the 
 spatial statistics (or clustering) of dark matter directly. 
 Instead, we measure the clustering of galaxies or quasars, which trace
 the underlying matter distribution. The smoothed galaxy/quasar density field is 
@@ -455,7 +453,7 @@ to the covariance matrix estimate~\citep{hartlap2007}.
 
 From $\bm{D}$, $F(\bm{\theta})$, and $\bm{C}$ we can evalulate an estimate of the 
 likelihood function. From the likelihood,
-since the prior probability distribution is chosen \em{a priori}, the posterior 
+since the prior probability distribution is chosen {\em a priori}, the posterior 
 probability distribution functions of the cosmological parameters is essentially already 
 evaluated. In practice, the posterior distribution is not evaluated at all points in 
 parameter space, but rather sampled using a sampler such as a Markov Chain Monte 
@@ -512,38 +510,41 @@ the BOSS Data Release 12 CMASS (not an acronym) galaxy sample
 measurements from galaxy surveys can be jointly analyzed in order to
 derive constraints explicitly on $f$. 
 
-All LSS analyses must robustly account for observational systematic effects. 
+All LSS analyses suffer from observational systematic effects. 
 For fiber-fed multi-object spectroscopic surveys 
 (\emph{e.g.} SDSS, BOSS, eBOSS, DESI, and PFS) these effects include 
 incompleteness from stellar density, incompleteness from seeing, 
 fiber collisions, and redshift failures~\citep{Ross:2012aa, Anderson:2012aa}. 
 If unaccounted, fiber collisions, for instance, prevent surveys from 
 collecting a significant fraction redshifts due to physical constraints 
-on the focal plane. Their impact on $P(k)$ is well beyond their angular scale 
-and restricts analysis on small scales, which has higher signal-to-noise. 
-In addition to discarding the statistical gains of these surveys, fiber 
-collisions can also bias the constraints on cosmological parameters. 
+on the focal plane. As I detail in \chap{fc}, their impact on $P(k)$ 
+goes well beyond their angular scale and restricts analysis on small 
+scales, which have higher signal-to-noise. 
+In addition to diminishing the statistical power of galaxy redshift surveys, 
+fiber collisions can also bias constraints on cosmological parameters. 
 Fortunately, challenges from observational systematics are often {\em solvable}
 \citep[][and \chap{fc}]{Ross:2012aa, Guo:2012aa}.
 
-The likelihood of Eq.~\ref{eq:likelihood}, assumes a Gaussian functional form
--- a standard assumption in LSS analyses. This assumption for LSS with galaxies, 
-in detail, cannot be correct due to nonlinear gravitational evolution and 
-biasing~\citep{Bernardeau:2002aa}. Furthermore, to capture the sample variance of the data
-the likelihood relies on the covariance matrix estimate, which currently 
-faces a number of shortcomings. Besides the labor and computational costs 
-of the required simulated mock catalogs, mock catalogs are inaccurate on small scales~(see 
-\citealt{cosmiccode,nifty} and references therein). Furthermore, using covariance 
+In Eq.~\ref{eq:likelihood}, the likelihood function assumes a Gaussian functional form
+-- a standard assumption in LSS analyses. However, in detail, this assumption cannot 
+be correct due to nonlinear gravitational evolution and biasing~\citep{Mo:1996aa, Sommerville:2001aa, Casas-Miranda:2002aa, Bernardeau:2002aa}.
+The likelihood also relies on the estimated covariance matrix to capture 
+the sample variance of the data. Besides the labor and computational costs 
+of required,  simulated mock catalogs used for covariance matrix estimation 
+are inaccurate on small scales~(see \citealt{cosmiccode,nifty} and references therein). 
+Furthermore, using covariance 
 matrix estimates rather than the ``true'' covariance matrix \citep{Sellentin:2016a}
 along with systematics impact the likelihood in ways difficult to model. 
-Evaluating the explicit likelihood, however, is not necessary for inferring
+Fortunately, evaluating the explicit likelihood is {\em not} necessary for inferring
 cosmological parameters. Likelihood-free inferences such as Approximate 
 Bayesian Computation (ABC) relax these restrictions and make inference 
-possible without making any assumptions on the likelihood (\chap{abc}).
+possible without making any assumptions on the likelihood.  In \chap{abc}
+I combine ABC with a Population Monte Carlo sampler and apply it in the
+context of LSS.
 
-As described earlier in this Chapter, galaxies are biased tracers of the 
+As described earlier, galaxies are biased tracers of the 
 underlying matter distribution. For more than a decade, halo occupation 
-modeling has been the main framework for connecting galaxies
+modeling has been the main, and effective, framework for connecting galaxies
 to the dark matter structures underneath in galaxy formation and cosmology
 studies (\todo{Yang et al. 2003; Tinker et al. 2005; Zehavi et al. 2005; Porciani  Norberg
 2006; van den Bosch et al. 2007; Zheng et al. 2007; Conroy
@@ -553,14 +554,16 @@ Leauthaud et al. 2012; Rodr´ıguez-Puebla et al. 2012; Tinker
 et al. 2013; Cacciato et al. 2013; More et al. 2013;
 Guo et al. 2014; Zu Mandelbaum 2015}). The standard halo occupation model
 assumes that galaxies reside in dark mater halos and their occupation 
-is function of the mass of the halo. However, the clustering of dark 
-matter halos, which themselves are tracers of the density field, 
-depend on properties beyond their masses. If this effect, coined 
+is a function of only the mass of the halo. However, the clustering of dark 
+matter halos depend on properties beyond their masses, such as their 
+assembly history. If this effect, coined 
 {\em halo assembly bias}, propagates to galaxies, it will induce 
-{\em galaxy} assembly bias on standard halo occupaiton model and 
-significantly impact galaxy clustering analyses (\todo{Zentner:2014}). 
+{\em galaxy assembly bias} on standard halo occupaiton model and 
+significantly impact galaxy clustering analyses~\citep[][\todo{Zentner:2014}]{hearin15}. 
+Therefore, better understanding of the galaxy-halo connection is 
+essential for LSS analyses. 
 
-Beyond their utility as tracers, galaxies also pose fundamental 
+Beyond their utility as tracers for cosmology, galaxies also pose fundamental 
 questions regarding how the early homogenous Universe became the heterogenous 
 one today. Observations have now firmly established a global view of galaxy 
 properties out to $z\sim1$ \citep[\emph{e.g.}][\chap{galenv}]{Blanton:2009aa, Moustakas:2013aa}.
@@ -577,20 +580,22 @@ in galaxy evolution.  In $\Lambda$CDM, structures form
 merge to form larger ones. The galaxy population can be positioned in 
 this framework with halo occupation in order to constrain key elements 
 of their evolution and better understand the galaxy-halo connection 
-\citep[][\chap{galhalo}]{Wetzel:2013aa}. 
+\citep[][\todo{Tinker:2016}]{Wetzel:2013aa}. In \chap{galhalo}, I use
+this approach to measure the timescale of star-formation quenching 
+in central galaxies. 
 
-In this dissertation, I tackle key methodological challenges in 
-galaxy clustering by developing methods to robustly treat systematics (\chap{fc}), 
+In this dissertation, I tackle key methodological challenges in LSS analyses
+with galaxy clustering by developing methods to robustly treat systematics (\chap{fc}), 
 introducing innovative approaches to inference in LSS studies (\chap{abc}), and 
 improving our understanding of the galaxy-halo connection 
-(\chap{galenv} and \chap{galhalo}). Each Chapter contributes to unlocking 
+(\chapname s~\chapalt{galenv} and~\chapalt{galhalo}). Each Chapter contributes to unlocking 
 the full potential of current and future galaxy redshift surveys and will be
 critical for testing cosmological models and General Relativity and 
 constraining the total neutrino mass. 
 
 \chapname s~\chapalt{fc} and~\chapalt{galenv} have both been refereed and
 published in the astronomical literature.
-\chapname s~\chapalt{abc} and~\chapalt{galhalo} have been refereed and accepted 
+\chapname s~\chapalt{abc} and~\chapalt{galhalo} have both been refereed and accepted 
 to the \emph{Monthly Notices of the Royal Astronomical Society} and \emph{The Astrophysical Journal},
 respectively. All of these \chapname s were co-authored with collaborators but the majority
 of the work and writing in each \chapname\ is mine. Below, I describe my contributions to each \chapname:

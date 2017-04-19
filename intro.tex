@@ -66,7 +66,7 @@ overdensity field (or density fluctuation) at comoving position $\bm{r}$:
 where $\rho(\bm{r})$ is the density field and $\bar{\rho}$ is the mean 
 density. Then, in Fourier space the density fluctuation becomes 
 \beq
-\delta(\bm{k}) = \int \frac{{\rm d^3}{\bf r}}{(2\pi)^3}\; e^{-i\bm{k}\cdot\bm{r}}\;\delta(\bm{r}),
+\delta(\bm{k}) = \int \frac{{\rm d^3}\bm{r}}{(2\pi)^3}\; e^{-i\bm{k}\cdot\bm{r}}\;\delta(\bm{r}),
 \eeq
 the Fourier transform of $\delta(\bm{r})$. 
 For describing the evolution of the overdensity field, Fourier space is often 
@@ -95,7 +95,7 @@ Now in order to determine the evolution of the matter overdensity field
 (on sub-horizon scales) consider pressureless dark matter, which consistutes 
 most of the matter in the Universe. From the continuity, Euler, and Poisson equations
 \beqa 
-\frac{\partial \rho}{\partial t} + \nabla \dot \rho \bm{u} = 0  \\ 
+\frac{\partial \rho}{\partial t} + \nabla \cdot \rho \; \bm{u} = 0  \\ 
 \frac{\partial \bm{u} }{\partial t} + (\bm{u} \cdot \nabla) \cdot \bm{u} - \nabla\Phi = 0 \\ 
 \nabla^2\Phi - 4 \pi G \rho = 0 
 \eeqa
@@ -105,7 +105,7 @@ its equation of motion can be derived
 \eeq
 $\bm{u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
 is the scale factor. For a detailed derivation I refer readers to 
-\cite{peebles80, DodelsonBook}. This equation, a second order differential 
+\cite{peebles80} and \cite{DodelsonBook}. This equation, a second order differential 
 equation. Therefore, the solution can be written as 
 \beq 
 \delta(\bm{r}, t) = D^{(+)}(t) A(\bm{r}) + D^{(-)}(t) B(\bm{r}).
@@ -132,7 +132,7 @@ the Universe, represented by the Hubble radius, evolves with the scale factor $a
 During inflation, the Hubble radius remains constant. Afterwards the Universe 
 becomes radiation dominated. Based on the Friedmann equations the Hubble radius 
 during the radiation dominated era is approximately $\propto a^{2}$. After a period 
-where radiation and matter have the same energy density, the Universe 
+when radiation and matter have comparable energy densities, the Universe 
 becomes matter dominated where the Hubble radius is approximately $\propto a^{3/2}$. 
 Meanwhile, the physical scale of perturbations is $\lambda_{phys} = \lambda_{comov}\ a(t)$ 
 and thus $\propto a(t)$. As Fig.~\ref{fig:lifo} schematically illustrates, 
@@ -147,7 +147,7 @@ matter-radiation equality, where $a(t) = a_{eq}$, is $\lambda_{eq} \sim 500\;h^{
 Then perturbations that enter before the matter-radiation equality 
 have physical scales $\lambda_{phys} < \lambda_{eq}$ and since they enter
 during the radiation dominated era, these smaller scale perturbations 
-are effectively forzen and hence their growth is suppressed.
+are effectively frozen and hence their growth is suppressed.
 On the other hand, the larger scale perturbations with $\lambda_{phys} > \lambda_{eq}$
 enter after matter-radiation equality during the matter dominated epoch. These 
 perturbations do {\em not} experience the suppression of growth of the radiation 
@@ -191,33 +191,32 @@ expressed as
 \beq
 P(k) \propto k^{n_s} \; T^2(k) \; D^2(k).
 \eeq
-where $D(k) \equiv D^{(+)}$ from earlier this section. This means that, through 
-the cosmological models and parameters, which predict $T(k)$ and $D(k)$, we can 
-produce predictions of the powerspectrum of the density fluctuation. These
-predictions can then be compared to measurements made from observations in 
-order to produce constraints 
-on cosmological parameters, better understand dark energy, and test theories of 
-gravity. 
+where $D(k) \equiv D^{(+)}$ is the growth function from earlier this section. 
+Through the cosmological models and parameters, which predict 
+$T(k)$ and $D(k)$, we predict the powerspectrum of the density fluctuation. Then 
+these predictions can then be compared to measurements made from observations in 
+order to produce constraints on cosmological parameters, better understand dark 
+energy, and test theories of gravity. 
 
 Unfortunately, most of the matter in the Universe is in the form of dark 
 matter and does not interact with radiation, so observers cannot measure the 
-spatial statistics (or clustering) of dark matter directly. 
+spatial/clustering statistics of dark matter directly. 
 Instead, we measure the clustering of galaxies or quasars, which trace
-the underlying matter distribution. The smoothed galaxy/quasar density field is 
-approximated by a local function of the matter density field
+the underlying matter distribution. The smoothed galaxy/quasar density field 
+can be  approximated by a local function of the matter density field
 \beq
 \delta_g(\bm{r}) = f( \delta(\bm{r})). 
 \eeq
-$f(\delta(\bm{r})$ can then be expanded Taylor series~\citep{Fry:1993}:
+$f(\delta(\bm{r}))$ can then be expanded Taylor series~\citep{Fry:1993}:
 \beq
 \delta_g({\bf r}) = \sum\limits_{k=0}^{\infty} \frac{b_k}{k!} \delta^k 
 \eeq
 where $b_0$ is chosen so that $<\delta_g> = 0$ and $b_1$ is referred to as 
-the linear bias factor. Then to linear order, 
+the linear bias factor. To linear order, 
 \beq
 P_g(k) = b_1^2 P(k). 
 \eeq
-The primary galaxy subpopulation used so far in LSS studies are luminous 
+The primary galaxy subpopulation used in LSS studies so far are luminous 
 red galaxies~\citep{Eisenstein:2001aa, Dawson:2013aa}. These galaxies have $b_1 > 1$,
 which makes them {\em biased} tracers of the matter 
 distribution~\citep{Zehavi:2005aa, Sheldon:2009aa,Gaztanaga:2009aa, Zhai:2016aa}.
@@ -227,7 +226,7 @@ have stronger clustering properties than the overall overdensity field~\citep{Ma
 Based on the derivation of this section, once we have the spatial 
 distribution of galaxies or quasars, we can derive the clustering of the matter
 distribution and then infer cosmological constraints. In practice, however, a
-number of factors complicate this procedure. One key complication is redshift-space
+number of factors complicate this procedure. One major complication is redshift-space
 distortions, which will be discussed in the next section.
 
 \section{Redshift-Space Distortions} \label{sec:rsd}
@@ -251,14 +250,14 @@ z_{obv} = z_{true} +  \frac{v_{pec}}{c}.
 The galaxy comoving positions derived from the angular positions and redshifts are then
 in {\em redshift-space} and ``distorted'' compared to real-space comoving positions by 
 \beq
-{\bf s} = {\bf x} +  \frac{{\bf v}_{pec} \cdot \hat{n}}{H_0}
+\bm{s} = \bm{x} +  \frac{\bm{v}_{pec} \cdot \hat{n}}{H_0}
 \eeq 
 where $\hat{n}$ is the unit vector along the line-of-sight. Thankfully, all hope is not 
 lost. 
 
 The peculiar velocities of galaxies are directly related to the total 
 matter distribution, since galaxies can be thought of as test particles in a 
-gravitational field. Using this relation, \cite{Kaiser:1984aa} derives an 
+gravitational field. Using this relation, \cite{Kaiser:1984aa} derived an 
 approximation for the distortion caused by the coherent infall of galaxies 
 onto overdense regions in redshift space. This redshift-space 
 distortion (RSD), often referred to as the Kaiser effect, causes observations of 
@@ -277,7 +276,7 @@ derived from the continuity equation and the distant observer approximation,
 $f$ is the growth rate of structure (Eq.~\ref{eq:f_growth}) and 
 $\mu = \bm{k} \cdot \hat{n} / k$, cosine of the angle between $\bm{k}$ and 
 the line-of-sight. In corporating the Kaiser effect into the galaxy bias model 
-from Section~\ref{sec:lss}, the smoothed galaxy/quasar overdensity field in 
+from Section~\ref{sec:lss}, the galaxy/quasar overdensity field in 
 redshift-space becomes
 \beq
 \delta_g^{(s)}(\bm{k}) = (b_1 + f \mu^2) \delta(\bm{k}).
@@ -298,7 +297,8 @@ eye in galaxy redshift maps where the elongations of the galaxy positions along 
 line-of-sight resemble fingers pointing towards the observer. Aptly this 
 redshift-space distortion is referred to as the ``fingers-of-god''. Its impact on the 
 powerspectrum, is empirically modeled and typical quantified using an overall exponential 
-factor. Including both RSDs from the Kaiser effect and the fingers-of-god, the 
+factor \citep[][]{Jackson:1972aa,Scoccimarro:2004aa,Taruya:2010aa,Beutler:2016aa}. 
+Including both RSDs from the Kaiser effect and the fingers-of-god, the 
 redshift-space powerspectrum is then 
 \beq \label{eq:pk_rsd}
 P_g^{(s)}(k, \mu) \approx e^{-f^2 \sigma_v^2 \mu^2 k^2} (b_1 + f \mu^2)^2 P(k)
@@ -306,8 +306,9 @@ P_g^{(s)}(k, \mu) \approx e^{-f^2 \sigma_v^2 \mu^2 k^2} (b_1 + f \mu^2)^2 P(k)
 where $\sigma_v$ is a paramter quantifying the strength of the effect and is usually
 left as a free parameter in analyses. 
 
-RSDs depend on $f$ (Eq.~\ref{eq:pk_rsd}). RSD analyses in LSS studies exploit this
-dependence by measuring the impact of RSDs on the powerspectrum to constrain $f$. 
+Eq.~\ref{eq:pk_rsd} reveals the $f$ dependence in RSDs. RSD analyses in 
+LSS studies exploit this dependence by measuring the impact of RSDs on 
+the powerspectrum to constrain $f$. 
 Consider the Legendre expansion of $P_g^{(s)}(k, \mu)$, 
 \beq
 P_g^{(s)}(k, \mu) = \sum\limits_{\ell=0, 2, 4 ...} \mathcal{L}_\ell(\mu) P_g^\ell(k). 
@@ -319,8 +320,8 @@ P_g^{\ell}(k) = \frac{2 \ell + 1}{2} \int\limits_{-1}^{1} {\rm d}\mu \; P_g^{(s)
 The RSD factor in the  powerspectrum multipoles for $\ell= 0$ (monopole) and $2$ (quadrupole)
 are 
 \beqa
-P_g^0 (k) = (b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2) P(k) \\
-P_g^2 (k) = (\frac{4}{3} f b_1 + \frac{4}{7} f^2) P(k). 
+P_g^0 (k) &=& (b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2) P(k) \\
+P_g^2 (k) &=& (\frac{4}{3} f b_1 + \frac{4}{7} f^2) P(k). 
 \eeqa
 For simplicity, we neglect the fingers-of-god, which does not significantly impact larger scales. 
 Taking the ratio of the quadrupole over the monopole, 
@@ -331,7 +332,7 @@ we can in principle eliminate the dependence on scale and extract information on
 Of course in practice the simplified derivations of this section break down. Instead
 of the simple linear theory theoretical models I derived, models of $P_g^{(s)}$ 
 are derived using perturbation theory and incorporate more sophisticated RSD and bias 
-models~\citep[][\todo{more citations}]{Bernardeau:2002aa, Taruya:2013aa, Taruya:2014aa, Beutler:2016aa}. 
+models~\citep[][]{Bernardeau:2002aa, Scoccimarro:2004aa, Taruya:2010aa, Nishimichi:2011aa, Taruya:2013aa, Taruya:2014aa, Beutler:2016aa}. 
 These models are then compared to the observed $P_g$ multipoles from galaxy surveys 
 in order to derive constraints on cosmological parmaeters such as $f$. 
 %illustrates how the distortions caused by RSDs allow us to extract information of $f$ through measurements of the redshift-space galaxy powerspectrum!  
@@ -347,7 +348,8 @@ approximation because dark matter consistutes the majority of matter in the
 Universe. However, it negelects some of the more detailed imprints on 
 LSS from other components of matter -- \emph{i.e.} neutrinos, which  
 oscillation and detection experiments have \emph{very} convincingly 
-(Nobel Prize in Physics 2015) confirmed is {\em not} massless~\citep[][\todo{more citations}]{Lesgourgues:2012aa}
+(Nobel Prize in Physics 2015) confirmed is {\em not} massless~\citep[][]{
+Hu:1998aa, Lesgourgues:2012aa, Lesgourgues:2013aa, Lesgourgues:2014aa}.
 %(\todo{Beringer et al. 2012,Lesgourges, 2012, 2013})
 
 In the very early Universe, neutrinos are relativistic and coupled to the 

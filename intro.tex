@@ -78,11 +78,11 @@ In fact, the two-point statistic is one of the most commonly used tool in
 large scale structure studies. This two-point statistic, which is also 
 referred to as the correlation function, is defined as 
 \beq
-\xi(\bm{r}) = <\delta(\bm{x})\delta(\bm{x} +  \bm{r})>
+\xi(\bm{r}) = \langle \delta(\bm{x})\delta(\bm{x} +  \bm{r}) \rangle
 \eeq
 and in Fourier space as
 \beq
-<\delta(\bm{k})\delta(\bm{k'})> = (2\pi)^3 P(\bm{k})\;\delta^{D}(\bm{k}+\bm{k'}).
+\langle \delta(\bm{k})\delta(\bm{k'}) \rangle = (2\pi)^3 P(\bm{k})\;\delta^{D}(\bm{k}+\bm{k'}).
 \eeq
 $\delta^{D}$ is the Dirac delta function and $P(\bm{k})$ is the two-point statistic in 
 Fourier space -- the {\em powerspectrum}. $P(\bm{k})$ is the Fourier transform of 
@@ -211,7 +211,7 @@ $f(\delta(\bm{r}))$ can then be expanded Taylor series~\citep{Fry:1993}:
 \beq
 \delta_g({\bf r}) = \sum\limits_{k=0}^{\infty} \frac{b_k}{k!} \delta^k 
 \eeq
-where $b_0$ is chosen so that $<\delta_g> = 0$ and $b_1$ is referred to as 
+where $b_0$ is chosen so that $\langle \delta_g \rangle = 0$ and $b_1$ is referred to as 
 the linear bias factor. To linear order, 
 \beq
 P_g(k) = b_1^2 P(k). 

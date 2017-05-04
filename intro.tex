@@ -26,7 +26,7 @@ of the Universe.
 The next leap in galaxy surveys will continue to expand the cosmic 
 volumes probed by galaxies. These observations have the potential 
 to constrain cosmological parameters with unprecedented precision. 
-In the following secitons, I briefly introduce how observations from galaxy
+In the following sections, I briefly introduce how observations from galaxy
 redshift surveys can be used to test cosmological models, 
 General Relativity, and particle physics beyond the Standard Model.
 
@@ -58,7 +58,7 @@ From the early Universe, primordial quantum fluctuations grow into the
 large-scale structures of the Universe we observe today through gravitational 
 instability over different epochs of cosmic history. In this section, I briefly 
 describe the simplified ({\em linear}) theory of this evolution and explain core 
-concepts of LSS cosmology using galaxies. Lets begin by defining the matter 
+concepts of LSS cosmology using galaxies. Let us begin by defining the matter 
 overdensity field (or density fluctuation) at comoving position $\bm{r}$: 
 \beq \label{eq:delta}
 \delta(\bm{r}) = \frac{\rho(\bm{r}) - \bar{\rho}}{\bar{\rho}}, 
@@ -70,8 +70,8 @@ density. Then, in Fourier space the density fluctuation becomes
 \eeq
 the Fourier transform of $\delta(\bm{r})$. 
 For describing the evolution of the overdensity field, Fourier space is often 
-favored because, as derived later in the section, the Fourier modes of 
-$\delta$ evolve independently on large scales -- \emph{i.e.} in linear theory.
+favored in the literature.
+%because, as derived later in the section, the Fourier modes of $\delta$ evolve independently on large scales -- \emph{i.e.} in linear theory.
 The information in the overdensity field is often quantified using its 
 $N$-point statistics \citep{peebles80, Bernardeau:2002aa, DodelsonBook}. 
 In fact, the two-point statistic is one of the most commonly used tool in 
@@ -85,11 +85,11 @@ and in Fourier space as
 \langle \delta(\bm{k})\delta(\bm{k'}) \rangle = (2\pi)^3 P(\bm{k})\;\delta^{D}(\bm{k}+\bm{k'}).
 \eeq
 $\delta^{D}$ is the Dirac delta function and $P(\bm{k})$ is the two-point statistic in 
-Fourier space -- the {\em powerspectrum}. $P(\bm{k})$ is the Fourier transform of 
+Fourier space -- the {\em power spectrum}. $P(\bm{k})$ is the Fourier transform of 
 $\xi(\bm{r})$ and, in principle, they contain the same information. 
 In practice, however, analyzing $\xi(\bm{r})$ and $P(\bm{k})$ carry different 
 caveats~\citep{Feldman:1994aa}. Throughout this dissertation, I will mainly focus 
-on the powerspectrum. 
+on the power spectrum. 
 
 Now in order to determine the evolution of the matter overdensity field
 (on sub-horizon scales) consider pressureless dark matter, which consistutes 
@@ -105,8 +105,8 @@ its equation of motion can be derived
 \eeq
 $\bm{u}$ is the velocity field, $\Phi$ is the gravitational potential, and $a$ 
 is the scale factor. For a detailed derivation I refer readers to 
-\cite{peebles80} and \cite{DodelsonBook}. This equation, a second order differential 
-equation. Therefore, the solution can be written as 
+\cite{peebles80} and \cite{DodelsonBook}. The solution for this second order 
+differential equation can be written as
 \beq 
 \delta(\bm{r}, t) = D^{(+)}(t) A(\bm{r}) + D^{(-)}(t) B(\bm{r}).
 \eeq
@@ -122,7 +122,7 @@ This growth rate of structure is a key quantity in LSS cosmology for testing dif
 cosmological models and theories of gravity. $f$ will be discussed further in 
 Section~\ref{sec:rsd}.
 
-In addition to the their gravitation evolution, the density fluctuations 
+In addition to their gravitation evolution, the density fluctuations 
 evolve through different epochs in cosmic history: inflation, 
 radiation-dominated era, matter-radiation equality, and matter-dominated era. Each of 
 these periods leave an imprint on the evolution of $\delta$. In Fig.~\ref{fig:lifo}, 
@@ -179,20 +179,20 @@ perturbation through these epochs are quantified through the transfer function $
 \end{center}
 \end{figure*}
 
-The density fluctuations after inflation can be summarized by the powerspectrum: 
+The density fluctuations after inflation can be summarized by the power spectrum: 
 \beq
 P_{\rm inf}(k) \propto k^{n_s}
 \eeq
-where $n_s$, the spectral tilt of the primordial powerspectrum, is measured to be 
+where $n_s$, the spectral tilt of the primordial power spectrum, is measured to be 
 $\sim 1$ \citep{Harrison:1970aa, Peebles:1970, Zeldovich:1972, Komatsu:2011aa}.
-Then, the powerspectrum of the density fluctuation in the late Universe can be 
+Then, the power spectrum of the density fluctuation in the late Universe can be 
 expressed as 
 \beq
 P(k) \propto k^{n_s} \; T^2(k) \; D^2(k).
 \eeq
 where $D(k) \equiv D^{(+)}$ is the growth function from earlier this section. 
 Through the cosmological models and parameters, which predict 
-$T(k)$ and $D(k)$, we predict the powerspectrum of the density fluctuation. Then 
+$T(k)$ and $D(k)$, we predict the power spectrum of the density fluctuation. Then 
 these predictions can then be compared to measurements made from observations in 
 order to produce constraints on cosmological parameters, better understand dark 
 energy, and test theories of gravity. 
@@ -230,26 +230,26 @@ distortions, which will be discussed in the next section.
 
 \section{Redshift-Space Distortions} \label{sec:rsd}
 Spectroscopic redshifts surveys, such as 2dF Galaxy Redshift Survey~\citep{Colless:1999aa}, 
-Sloan Digital Sky Survey, and BOSS, have mapped out millions of distant galaxies. 
+Sloan Digital Sky Survey~\citep[SDSS][]{York:2000aa}, and BOSS, have mapped out millions of distant galaxies. 
 Current surveys such as Extended Baryon Oscillation 
 Spectroscopic Survey (eBOSS; \citealt{Dawson:2015aa}), and future surveys such as 
 the Dark Energy Survey Instrument (DESI; \citealt{Schlegel:2011aa, Morales:2012aa, Makarem:2014aa}) 
 and the Subaru Prime Focus Spectrograph (PFS; \citealt{Takada:2014aa}), will 
 continue to map out millions more. These surveys dominate LSS studies and have/will 
 been critical for inferring precise cosmological constraints. As their name suggest, 
-however, these {\em redshift} surveys do not directly measure the acutal position of 
+however, these {\em redshift} surveys do not directly measure the actual position of 
 galaxies. Instead they measure the angular positions (right ascension and declination) 
 and redshifts of galaxies. 
 
 These redshifts are a combined measurement of the recession velocities due to 
 the expansion of the Universe and the peculiar velocities of the galaxies:
 \beq
-z_{obv} = z_{true} +  \frac{v_{pec}}{c}.
+z_{\rm obv} = z_{\rm true} +  \frac{v_{\rm pec}}{c}.
 \eeq 
-The galaxy comoving positions derived from the angular positions and redshifts are then
+The galaxy comoving positions derived from the angular positions and redshifts are
 in {\em redshift-space} and ``distorted'' compared to real-space comoving positions by 
 \beq
-\bm{s} = \bm{x} +  \frac{\bm{v}_{pec} \cdot \hat{n}}{H_0}
+\bm{s} = \bm{x} +  \frac{\bm{v}_{\rm pec} \cdot \hat{n}}{H_0}
 \eeq 
 where $\hat{n}$ is the unit vector along the line-of-sight. Thankfully, all hope is not 
 lost. 
@@ -280,7 +280,7 @@ redshift-space becomes
 \beq
 \delta_g^{(s)}(\bm{k}) = (b_1 + f \mu^2) \delta(\bm{k}).
 \eeq
-The redshift-space powerspectrum of the galaxy overdensity field can then be
+The redshift-space power spectrum of the galaxy overdensity field can then be
 written as 
 \beq
 P_g^{(s)}(k, \mu) = (b_1 + f \mu^2)^2 P(\bm{k}).
@@ -295,10 +295,10 @@ larger scales along the line-of-sight. This effect can easily be identified by
 eye in galaxy redshift maps where the elongations of the galaxy positions along the 
 line-of-sight resemble fingers pointing towards the observer. Aptly this 
 redshift-space distortion is referred to as the ``fingers-of-god''. Its impact on the 
-powerspectrum, is empirically modeled and typical quantified using an overall exponential 
+power spectrum, is empirically modeled and typical quantified using an overall exponential 
 factor \citep[][]{Jackson:1972aa,Scoccimarro:2004aa,Taruya:2010aa,Beutler:2016aa}. 
 Including both RSDs from the Kaiser effect and the fingers-of-god, the 
-redshift-space powerspectrum is then 
+redshift-space power spectrum is then 
 \beq \label{eq:pk_rsd}
 P_g^{(s)}(k, \mu) \approx e^{-f^2 \sigma_v^2 \mu^2 k^2} (b_1 + f \mu^2)^2 P(k)
 \eeq
@@ -307,16 +307,16 @@ left as a free parameter in analyses.
 
 Eq.~\ref{eq:pk_rsd} reveals the $f$ dependence in RSDs. RSD analyses in 
 LSS studies exploit this dependence by measuring the impact of RSDs on 
-the powerspectrum to constrain $f$. 
+the power spectrum to constrain $f$. 
 Consider the Legendre expansion of $P_g^{(s)}(k, \mu)$, 
 \beq
 P_g^{(s)}(k, \mu) = \sum\limits_{\ell=0, 2, 4 ...} \mathcal{L}_\ell(\mu) P_g^\ell(k). 
 \eeq
-Each of powerspectrum ``multipole'' of this expansion is then  
+Each of power spectrum ``multipole'' of this expansion is then  
 \beq
 P_g^{\ell}(k) = \frac{2 \ell + 1}{2} \int\limits_{-1}^{1} {\rm d}\mu \; P_g^{(s)}(k, \mu)\; \mathcal{L}_\ell(\mu).
 \eeq
-The RSD factor in the  powerspectrum multipoles for $\ell= 0$ (monopole) and $2$ (quadrupole)
+The RSD factor in the  power spectrum multipoles for $\ell= 0$ (monopole) and $2$ (quadrupole)
 are 
 \beqa
 P_g^0 (k) &=& (b_1^2 + \frac{2}{3} f b_1 + \frac{1}{5}f^2) P(k) \\
@@ -334,7 +334,7 @@ are derived using perturbation theory and incorporate more sophisticated RSD and
 models~\citep[][]{Bernardeau:2002aa, Scoccimarro:2004aa, Taruya:2010aa, Nishimichi:2011aa, Taruya:2013aa, Taruya:2014aa, Beutler:2016aa}. 
 These models are then compared to the observed $P_g$ multipoles from galaxy surveys 
 in order to derive constraints on cosmological parmaeters such as $f$. 
-%illustrates how the distortions caused by RSDs allow us to extract information of $f$ through measurements of the redshift-space galaxy powerspectrum!  
+%illustrates how the distortions caused by RSDs allow us to extract information of $f$ through measurements of the redshift-space galaxy power spectrum!  
 
 \section{Weighting Neutrinos with Galaxies} \label{sec:mneut}
 Beyond inferring the growth rate of structure, which 
@@ -384,10 +384,10 @@ density. As described in
 Section~\ref{sec:lss}, matter-radiation equality marks the turning point in 
 suppression of growth of structure, quantified by $T(k)$. The transition of 
 neutrinos from radiation to matter impacts $a_{eq}$ and thus impacts $T(k)$ by 
-shifting the turning point of the cold dark matter (CDM) only powerspectrum. 
+shifting the turning point of the cold dark matter (CDM) only power spectrum. 
 Even after becoming non-relativistic, neutrinos still do not contribute to the
 clustering of matter on scale smaller than $k_{\rm FS}$. The impact of this scale dependent 
-suppression of clustering, can be analytically estimated for the matter powerspectrum 
+suppression of clustering, can be analytically estimated for the matter power spectrum 
 \citep{Bird:2012aa}: 
 \beq
 \frac{\Delta P}{P} = \frac{P^{f_\nu \neq 0} - P^{f_\nu = 0}}{P^{f_\nu = 0}} \approx - 8 f_\nu \;\;\;\; {\rm for}\;\; k \gg k_{\rm FS}.
@@ -396,21 +396,20 @@ where $f_\nu$ is the ratio of the neutrino energy density over that of matter
 ($\Omega_\nu / \Omega_m$).
 
 The total mass of neutrinos (\mneut) dictates the strength of these imprints and  
-can therefore be constrained by the shape of the powerspectrum. The same tools 
+can therefore be constrained by the shape of the power spectrum. The same tools 
 used for analyzing RSDs and measuring the growth rate of structure can also be 
 used to measure \mneut\; from observations of galaxy 
 surveys~\citep{Hu:1998ab, Costanzi:2013aa, Villaescusa:2015aa, Cuesta:2016ab}.
 Based on forecasts, the next galaxy surveys such as 
 DESI\footnote{DESI \textit{Final Design Report} (FDR): \url{http://desi.lbl.gov/tdr/}} 
 have the potential to infer the most stringent constraints on 
-\mneut -- $\sigma_{\sum m_\nu} \sim 0.03\;{\rm eV}$. Such constraints would 
-trump the sensitivity of particle physics experiments~\citep[][]{Wolf_Katrin}
-and have the potential to distinguish
-between the normal or invereted neutrino mass hierarchy and reveal physics
+\mneut -- $\sigma_{\sum m_\nu} \sim 0.03\;{\rm eV}$. Such constraints 
+%would trump the sensitivity of particle physics experiments~\citep[][]{Wolf_Katrin} and 
+have the potential to distinguish between the normal or invereted neutrino mass hierarchy and reveal physics
 beyond the Standard Model.
 
 \section{Analyzing Galaxy Clustering}
-%Beyond the general description and derivation of the redshift-space galaxy powerspectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
+%Beyond the general description and derivation of the redshift-space galaxy power spectrum, the rest of galaxy clustering analysis in LSS studies follows the standard approach to Bayesian parameter inference. 
 In the previous sections, I laid out the theoretical framework for LSS analysis 
 using galaxy clustering. As I alluded earlier, the models and predictions of 
 this theoretical framework can be compared to observations to derive constraints
@@ -473,25 +472,26 @@ Carlo sampler \citep[\emph{e.g.} $\mathtt{emcee}$][]{emcee}.
 
 From the galaxy clustering analysis described in this chapter, the latest 
 galaxy surveys have produced some remarkable constraints on cosmological parameters. 
-From the SDSS and BOSS surveys, measurements of the powerspectrum multipoles 
+From the SDSS and BOSS surveys, measurements of the power spectrum multipoles 
 along with analogous configure-space analyses have yielded a number of constraints 
 on $f\sigma_8$~\citep{Reid:2012aa, Oka:2014aa, Beutler:2014aa, Alam:2015aa, Alam:2016aa, Beutler:2016aa}, 
-where $\sigma_8$ 
-is the amplitude of the powerspectrum on the scale of $8\;h^{-1}{\rm Mpc}$. 
-Similar to multipoles, powerspectrum wedges have also been used, in both 
+where $\sigma_8$ is the the rms linear fluctuation in density perturbations on 
+scales of $8\;h^{-1}{\rm Mpc}$.
+%amplitude of the power spectrum on the scale of $8\;h^{-1}{\rm Mpc}$. 
+Similar to multipoles, power spectrum wedges have also been used, in both 
 Fourier and configuration-spaces, to infer $f\sigma_8$ 
 constraints~\citep{Sanchez:2013aa, Sanchez:2016aa, Grieb:2016aa}. 
 These $f \sigma_8$ constraints can then be compared to cosmological predictions 
 from Cosmic Microwave Background (CMB) experiments such as the Wilkinson
 Microwave Anisotropy Probe~\citep{WMAP:2013} and {\em Planck}~\citep{Planck:2014aa}
 to test $\Lambda$CDM cosmology and General Relativity. 
-The constraints from BOSS are generally consistent $\Lambda$CDM and GR over 
+The constraints from BOSS are generally consistent with $\Lambda$CDM and GR over 
 $0.2 < z < 0.75$.  For instance, \cite{Beutler:2016aa} derives 
 $f\sigma_8 = 0.482 \pm 0.053, 0.455 \pm 0.050$, and $0.410 \pm 0.042$ from BOSS 
 for effective redshift $z_{\rm eff} = 0.38, 0.51$, and $0.61$.
-$f \sigma_8$ constraints from galaxy powerpsectrum analyses have also been 
+$f \sigma_8$ constraints from galaxy power spectrum analyses have also been 
 combined with CMB data to constrain \mneut~\citep{Zhao:2013aa, Beutler:2014ab, Gil-Marin:2015aa}.
-\cite{Beutler:2014ab}, from combining constraints from galaxy powerspectrum 
+\cite{Beutler:2014ab}, from combining constraints from galaxy power spectrum 
 analyses with {\em Planck} CMB results, derives the upper bound \mneut$ < 0.51\;{\rm eV}$.
 
 %Cosmological measurements such as galaxy clustering statistics are no longer dominated by uncertainties from statistical precision, but from systematic effects of the measurements. This is a result of the millions of redshifts to distant galaxies that have been obtained through redshift surveys such as the 2dF Galaxy Redshift Survey (2dFGRS; \citealt{Colless:1999aa}) and the Sloan Digital Sky Survey III Baryon Oscillation Spectroscopic Survey 
@@ -501,7 +501,7 @@ volume by an order of magnitude. These observations have the potential to
 produce cosmological parameter constraints with unprecedented statistical 
 precision. The main challenges for realizing their full potential are {\em methodological}.
 
-So far I have focused on LSS analyses using only the galaxy powerspectrum 
+So far I have focused on LSS analyses using only the galaxy power spectrum 
 -- the two-point statistic of the density fluctuations. Analyses restricted
 to just the two-point statistic, however, face a number of limitations. 
 The constraints on the growth rate of structure, listed above, have all 
@@ -532,7 +532,7 @@ disentangles contributions from gravitational instability versus
 non-linear biasing of galaxies. Without going into any further detail, 
 in Figure\ref{fig:bisp} I present the reduced galaxy bispectrum 
 $Q(k_1, k_2, k_3) = B(k_1, k_2, k_3)/(P(k_1)P(k_2) + P(k_2)P(k_3) + P(k_1)P(k_3))$ 
-measurement for the BOSS Data Release 12 CMASS (not an acronym) galaxy sample 
+measurement for the BOSS Data Release 12 CMASS galaxy sample 
 (right) and a perturbation theory model (left). The BOSS $Q(k_1, k_2, k_3)$ is 
 measured using the \cite{Scoccimarro:2015aa} estimator. 
 $P(k)$ and $B(k_1, k_2, k_3)$ measurements from galaxy surveys can be jointly analyzed in order to
@@ -541,30 +541,30 @@ derive constraints explicitly on $f$.
 All LSS analyses suffer from observational systematic effects. 
 For fiber-fed multi-object spectroscopic surveys 
 (\emph{e.g.} SDSS, BOSS, eBOSS, DESI, and PFS) these effects include 
-incompleteness from stellar density, incompleteness from seeing, 
-fiber collisions, and redshift failures~\citep{Ross:2012aa, Anderson:2012aa}. 
-If unaccounted, fiber collisions, for instance, prevent surveys from 
+variations in target selection relatd to stellar density, image depth, 
+seeing, and other factors~\citep{Ross:2012aa, Anderson:2012aa}. 
+If not accounted for fiber collisions, for instance, prevent surveys from 
 collecting a significant fraction redshifts due to physical constraints 
 on the focal plane. As I detail in \chap{fc}, their impact on $P(k)$ 
 goes well beyond their angular scale and restricts analysis on small 
 scales, which have higher signal-to-noise. 
 In addition to diminishing the statistical power of galaxy redshift surveys, 
 fiber collisions can also bias constraints on cosmological parameters. 
-Fortunately, challenges from observational systematics are often {\em solvable}
-\citep[][and \chap{fc}]{Ross:2012aa, Guo:2012aa}.
+Many efforts have been made to tackle these challenges from observational 
+systematics~\citep[][and \chap{fc}]{Ross:2012aa, Guo:2012aa}.
 
 In Eq.~\ref{eq:likelihood}, the likelihood function assumes a Gaussian functional form
 -- a standard assumption in LSS analyses. However, in detail, this assumption cannot 
 be correct due to nonlinear gravitational evolution and biasing~\citep{Mo:1996aa, Sommerville:2001aa, Casas-Miranda:2002aa, Bernardeau:2002aa}.
 The likelihood also relies on the estimated covariance matrix to capture 
 the sample variance of the data. Besides the labor and computational costs 
-of required,  simulated mock catalogs used for covariance matrix estimation 
+required to make them, simulated mock catalogs used for covariance matrix estimation 
 are inaccurate on small scales~(see \citealt{cosmiccode,nifty} and references therein). 
 Furthermore, using covariance 
 matrix estimates rather than the ``true'' covariance matrix \citep{Sellentin:2016a}
 along with systematics impact the likelihood in ways difficult to model. 
 Fortunately, evaluating the explicit likelihood is {\em not} necessary for inferring
-cosmological parameters. Likelihood-free inferences such as Approximate 
+cosmological parameters. Likelihood-free inference techniques such as Approximate 
 Bayesian Computation (ABC) relax these restrictions and make inference 
 possible without making any assumptions on the likelihood.  In \chap{abc}
 I combine ABC with a Population Monte Carlo sampler and apply it in the
@@ -572,7 +572,7 @@ context of LSS.
 
 As described earlier, galaxies are biased tracers of the 
 underlying matter distribution. For more than a decade, halo occupation 
-modeling has been the main, and effective, framework for connecting galaxies
+modeling has been a popular framework for connecting galaxies
 to the dark matter structures underneath in galaxy formation and cosmology
 studies~\citep{Yang:2003aa, Tinker:2005aa, vandenBosch:2007aa, Zheng:2007aa, 
 Conroy:2009aa, Guo:2011aa, Leauthaud:2012aa, Tinker:2013aa, Zu:2015aa}.
@@ -591,7 +591,8 @@ essential for LSS analyses.
 Beyond their utility as tracers for cosmology, galaxies also pose fundamental 
 questions regarding how the early homogenous Universe became the heterogenous 
 one today. Observations have now firmly established a global view of galaxy 
-properties out to $z\sim1$ \citep[\emph{e.g.}][\chap{galenv}]{Blanton:2009aa, Moustakas:2013aa}.
+properties out to 
+$z\sim1$~\citep[\emph{e.g.}][\chap{galenv}]{Bell:2004aa, Bundy:2006aa, Cooper:2007aa, Cassata:2008aa, Blanton:2009aa, Whitaker:2012aa, Moustakas:2013aa}.
 Galaxies roughly fall into two categories: star-forming galaxies and 
 quiescent ones with little star formation. The star-forming population 
 undergoes significant decline in star formation rate (SFR) over cosmic 
@@ -646,8 +647,8 @@ Andrew Hearin, David Hogg, and Kilian Walsh.
 {\item 
 For \chap{galenv}, I developed the idea for the project in collaboration with 
 Michael Blanton. I implemented the project using catalogs constructed by 
-John Moustakas from observations made by the PRIMUS collaboration (Alison Coil,
-Richard Cool, Daniel Eisenstein, Ramin Skibb, Kenneth Wong, and Guangtun Zhu).
+John Moustakas from observations made by the PRIMUS collaboration (Scott Burles, Alison Coil,
+Richard Cool, Daniel Eisenstein, Ramin Skibba, Kenneth Wong, and Guangtun Zhu).
 I wrote the paper with additions from Michael Blanton. 
 }
 
